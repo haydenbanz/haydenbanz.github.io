@@ -22,14 +22,42 @@
     <meta property="og:image" content="https://haydenbanz.github.io/images/banner.jpg" />
     <meta name="p:domain_verify" content="ae81412c4a8563de57a0180343270bec"/>
     <meta name="google-site-verification" content="g4NUFOT3Nu9iFZg6cVntV0ft6V7xN-8XgFQlS05rjFo" />
- 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/favicons//apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <link rel="stylesheet" href="https://code-glitchers.github.io/stylex.css">
+	
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+       <link rel="shortcut icon" href="favicons/icon.ico" type="image/x-icon">
+
 <style>
-        pre {
+     pre {
             background-color: black;
-            color: #7DF9FF; /* Green text color */
+            color:#7DF9FF; /* Green text color */
             padding: 10px;
-            border: 1px solid #7DF9FF;
+            border: 1px solid #f008c9;
             font-size: 16px;
             line-height: 1.4;
             font-family: "Courier New", Courier, monospace;
@@ -40,6 +68,15 @@
         pre:before {
             content: "$ "; /* Display a simulated prompt */
             color: #7DF9FF; /* Green prompt color */
+        }
+        
+        #terminal-input {
+            color: #7DF9FF; /* Electric blue text color for input */
+            border: none;
+            background: transparent;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            outline: none;
         }
 </style>
 
@@ -144,90 +181,15 @@
 
 
   </style>
- <!-- 
-    - custom css link
- <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
-    rel="stylesheet">
-	
-	
-	
-<script src="https://cdn.jsdelivr.net/npm/appwrite@10.1.0" />
-<script>
-    const { Client } = Appwrite;
-</script>
-
 
 	
-	
-	
-	
-	<script> 
-		const client = new Client();
 
-client
-    .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('6475f0d04024eb59ab0a');
-		
-		
-	</script>
-  
- 
- 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="https://technicalhayden.github.io/favicon-32x32.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="https://code-glitchers.github.io/styggle.css">
-  <link rel="stylesheet" href="https://code-glitchers.github.io/stylex.css">
-	
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
+  
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
 
     <aside class="sidebar" data-sidebar>
 
@@ -238,12 +200,12 @@ client
   </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Technicalhayden">∅x_hayden</h1>
+          <h1 class="name" title="Hayden Barnes">Hayden Barnes</h1>
 
-          <p class="title"><a href="https://www.linkedin.com/company/cube-cybernetics/" style="text-decoration: none;">Founder & CEO<a href="https://cubernetix.github.io/" style="text-decoration: none;"></p>
+          <p class="title"><a href="https://www.linkedin.com/company/code-glitch/" style="text-decoration: none;">Founder & CTO</a></p>
           <br>
-           <p class="title"><a href="https://cubernetix.github.io/" style="text-decoration: none;">CUBERNETIXS</a></p><br>
-		  <center><center>
+           
+		  
           <pre>
           </pre>
         </div>
@@ -287,7 +249,7 @@ client
             <div class="contact-info">
               <p class="contact-title">Phone</p>
 
-              <a href="tel:+919482040101" class="contact-link">+1 87974388854</a>
+              <a href="https://ai.glitch" class="contact-link">+1 87974388854</a>
             </div>
 
           </li>
@@ -306,7 +268,7 @@ client
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>127.0.0.1</address>
+              <address>Neon Alley 77, Kowloon Walled City, Hong Kong</address>
             </div>
 
           </li>
@@ -318,19 +280,19 @@ client
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://github.com/technicalhayden/" class="social-link">
+            <a href="https://github.com/haydenzbanz/" class="social-link">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="https://twitter.com/technicalhayden" class="social-link">
+            <a href="https://twitter.com/0x_hayd3n" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="https://www.instagram.com/technicalhayden/" class="social-link">
+            <a href="https://www.instagram.com/0x_hayden" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
@@ -407,7 +369,7 @@ client
 
     <h3>ʜᴇʏ, ᴡʜᴀᴛ'ꜱ ᴜᴘ? 👋 ɪᴛ'ꜱ ᴍᴇ. ᴄᴏᴏʟ, ʀɪɢʜᴛ?</h3>
 
- <pre id="terminal">
+    <pre id="terminal-output">
 [Hayden@root ~/glitch]$ cat Hayden.py
 from Glitch import Hayden
     def profile() {
@@ -416,11 +378,132 @@ from Glitch import Hayden
     }
  [Hayden@root ~/glitch]$
     </pre>
+    <div class="container">
+      <input type="text" id="sender-id" placeholder="Sender ID" width="30">      <input type="text" id="recipient" placeholder="Recipient" width="30"> <input type="text" id="message" placeholder="Message" width="50">
+    
+      <button onclick="sendMessage()">Send</button>
+  </div>
+ 
 
-    <script>
-        // Use JavaScript to change text color to electric blue
-        document.getElementById("terminal").style.color = "electricblue";
-    </script>  <p align="center"> <h2 class="h2 article-title">Programming</h2>
+  <style>
+    /* Style for the container div */
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Style for the input elements */
+    input[type="text"] {
+        border: none;
+        background: transparent;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        color: #7DF9FF; /* Electric blue text color */
+        outline: none;
+        margin-right: 10px; /* Add spacing between input elements */
+    }
+
+    /* Style for the button */
+    button {
+        background: transparent;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        color: #7DF9FF; /* Electric blue text color */
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+  <script>
+    // Function to handle user input and display it in the terminal
+    function processInput(event) {
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+    }
+
+    // Function to send a message to Discord webhook and display the result
+    async function sendMessage() {
+        const senderId = document.getElementById("sender-id").value;
+        const recipient = document.getElementById("recipient").value;
+        const message = document.getElementById("message").value;
+        const outputElement = document.getElementById("terminal-output");
+
+        // Create a new line with the user's input
+        const newLine = document.createElement("div");
+        newLine.style.color = "#7DF9FF"; // Electric blue text color
+        newLine.textContent = " [Hayden@root ~/glitch]$ send-discord-message -s " + senderId + " -r " + recipient + " -m " + message;
+
+        // Append the user input to the terminal output
+        outputElement.appendChild(newLine);
+
+        // Prepare the payload for Discord webhook
+        const payload = {
+            content: message,
+            username: senderId,
+        };
+
+        // Replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook URL
+        const webhookUrl = 'https://discord.com/api/webhooks/1160153863526035456/8Jy6JgqkuAz-Ed1cJ120WBAPrThhiU_daPd4UEluhKqElFvk0zph8ynhZlt5K7DQ3FYI';
+
+        try {
+            // Send the message to the Discord webhook
+            const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (response.ok) {
+                // Display success message in terminal output
+                const responseLine = document.createElement("div");
+                responseLine.style.color = "#7DF9FF"; // Electric blue text color
+                responseLine.textContent = "Message sent successfully to Discord webhook.";
+                outputElement.appendChild(responseLine);
+            } else {
+                // Display error message in terminal output
+                const errorLine = document.createElement("div");
+                errorLine.style.color = "red";
+                errorLine.textContent = "Error: Failed to send message to Discord webhook.";
+                outputElement.appendChild(errorLine);
+            }
+        } catch (error) {
+            // Handle network or other errors
+            const errorLine = document.createElement("div");
+            errorLine.style.color = "red";
+            errorLine.textContent = "Error: " + error.message;
+            outputElement.appendChild(errorLine);
+        }
+
+        // Clear the input fields
+        document.getElementById("sender-id").value = "";
+        document.getElementById("recipient").value = "";
+        document.getElementById("message").value = "";
+    }
+</script>
+
+    
+  
+  
+  
+  
+  
+  
+  
+  
+    <p align="center"> <h2 class="h2 article-title">Programming</h2>
             
 
             <div class="skills-box" data-skills-box>
