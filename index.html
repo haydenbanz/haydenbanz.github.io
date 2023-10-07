@@ -29,16 +29,20 @@
 
   <style>
  pre {
-    background-color: #f4f4f4;
+    background-color: black;
+    color: #00FF00; /* Green text color */
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #00FF00;
     font-size: 16px;
     line-height: 1.4;
-    overflow-x: auto; /* Enable horizontal scrolling if necessary */
     font-family: "Courier New", Courier, monospace;
     white-space: pre-wrap; /* Preserve line breaks and wrap text */
-	  }
-	  
+}
+
+pre:before {
+    content: "$ "; /* Display a simulated prompt */
+    color: #00FF00; /* Green prompt color */
+}
 .skills { padding-block: var(--section-padding); }
 
 .skills-content { margin-bottom: 50px; }
