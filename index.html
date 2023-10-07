@@ -370,12 +370,10 @@
     <h3>ʜᴇʏ, ᴡʜᴀᴛ'ꜱ ᴜᴘ? 👋 ɪᴛ'ꜱ ᴍᴇ. ᴄᴏᴏʟ, ʀɪɢʜᴛ?</h3>
 
     <pre id="terminal-output">
-[Hayden@root ~/glitch]$ cat Hayden.py
-from Glitch import Hayden
-    def profile() {
-        self.web = "haydenbanz.github.io/";
-        self.about = "💻 Cᴏᴅɪɴɢ";
-    }
+    [Hᴀʏᴅᴇɴ@ʀᴏᴏᴛ ~/ɢʟɪᴛᴄʜ]$ 
+    ɢʟɪᴛᴄʜᴠᴇɴᴏᴍ -ᴘ ᴀɴᴅʀᴏɪᴅ ʟʜsᴏᴛ=ɢʟɪᴛᴄʜ.ɴɢʀᴏᴋ.ɪᴏ ʟᴘᴏʀᴛ=80 R> ʀᴇᴍᴏᴛᴇsʜᴇʟʟ.ᴀᴘᴋ
+
+
  [Hayden@root ~/glitch]$
     </pre>
     <div class="container">
@@ -451,6 +449,7 @@ from Glitch import Hayden
       // Prepare the payload for Discord webhook
       const formData = new FormData();
       formData.append("content", message);
+      formData.append("recipient", recipient);
       formData.append("username", senderId);
       formData.append("file", fileInput.files[0]); // Add the selected file
 
@@ -468,13 +467,13 @@ from Glitch import Hayden
               // Display success message in terminal output
               const responseLine = document.createElement("div");
               responseLine.style.color = "#7DF9FF"; // Electric blue text color
-              responseLine.textContent = "Message sent successfully.";
+              responseLine.textContent = "Mᴇssᴀɢᴇ sᴇɴᴛ sᴜᴄᴄᴇssғᴜʟʟʏ.";
               outputElement.appendChild(responseLine);
           } else {
               // Display error message in terminal output
               const errorLine = document.createElement("div");
               errorLine.style.color = "red";
-              errorLine.textContent = "Error: Failed to send message with file to Discord webhook.";
+              errorLine.textContent = "Eʀʀᴏʀ: Fᴀɪʟᴇᴅ ᴛᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇ.";
               outputElement.appendChild(errorLine);
           }
       } catch (error) {
