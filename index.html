@@ -379,7 +379,7 @@ from Glitch import Hayden
  [Hayden@root ~/glitch]$
     </pre>
     <div class="container">
-      <input type="text" id="sender-id" placeholder="Sender ID" width="30">      <input type="text" id="recipient" placeholder="Recipient" width="30"> <input type="text" id="message" placeholder="Message" width="50">
+      <input type="text" id="sender-id" placeholder="Sender ID" width="30">      <input type="text" id="recipient" placeholder="Recipient" width="30"> <input type="text" id="message" placeholder="Message" width="50"><input type="file" id="file-input">
     
       <button onclick="sendMessage()">Send</button>
   </div>
@@ -424,76 +424,74 @@ from Glitch import Hayden
 
 
 
-  <script>
-    // Function to handle user input and display it in the terminal
-    function processInput(event) {
-        if (event.key === "Enter") {
-            sendMessage();
-        }
-    }
+<script>
+  // Function to handle user input and display it in the terminal
+  function processInput(event) {
+      if (event.key === "Enter") {
+          sendMessage();
+      }
+  }
 
-    // Function to send a message to Discord webhook and display the result
-    async function sendMessage() {
-        const senderId = document.getElementById("sender-id").value;
-        const recipient = document.getElementById("recipient").value;
-        const message = document.getElementById("message").value;
-        const outputElement = document.getElementById("terminal-output");
+  // Function to send a message with a file to Discord webhook
+  async function sendMessage() {
+      const senderId = document.getElementById("sender-id").value;
+      const recipient = document.getElementById("recipient").value;
+      const message = document.getElementById("message").value;
+      const fileInput = document.getElementById("file-input");
+      const outputElement = document.getElementById("terminal-output");
 
-        // Create a new line with the user's input
-        const newLine = document.createElement("div");
-        newLine.style.color = "#7DF9FF"; // Electric blue text color
-        newLine.textContent = " [Hayden@root ~/glitch]$ send-discord-message -s " + senderId + " -r " + recipient + " -m " + message;
+      // Create a new line with the user's input
+      const newLine = document.createElement("div");
+      newLine.style.color = "#7DF9FF"; // Electric blue text color
+      newLine.textContent = " [Hayden@root ~/glitch]$ send-discord-message -s " + senderId + " -r " + recipient + " -m " + message;
 
-        // Append the user input to the terminal output
-        outputElement.appendChild(newLine);
+      // Append the user input to the terminal output
+      outputElement.appendChild(newLine);
 
-        // Prepare the payload for Discord webhook
-        const payload = {
-            content: message,
-            username: senderId,
-        };
+      // Prepare the payload for Discord webhook
+      const formData = new FormData();
+      formData.append("content", message);
+      formData.append("username", senderId);
+      formData.append("file", fileInput.files[0]); // Add the selected file
 
-        // Replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook URL
-        const webhookUrl = 'https://discord.com/api/webhooks/1160153863526035456/8Jy6JgqkuAz-Ed1cJ120WBAPrThhiU_daPd4UEluhKqElFvk0zph8ynhZlt5K7DQ3FYI';
+      // Replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook URL
+      const webhookUrl = 'https://discord.com/api/webhooks/1160153863526035456/8Jy6JgqkuAz-Ed1cJ120WBAPrThhiU_daPd4UEluhKqElFvk0zph8ynhZlt5K7DQ3FYI';
 
-        try {
-            // Send the message to the Discord webhook
-            const response = await fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
-            });
+      try {
+          // Send the message with the file to the Discord webhook using a POST request
+          const response = await fetch(webhookUrl, {
+              method: 'POST',
+              body: formData,
+          });
 
-            if (response.ok) {
-                // Display success message in terminal output
-                const responseLine = document.createElement("div");
-                responseLine.style.color = "#7DF9FF"; // Electric blue text color
-                responseLine.textContent = "Message sent successfully to Discord webhook.";
-                outputElement.appendChild(responseLine);
-            } else {
-                // Display error message in terminal output
-                const errorLine = document.createElement("div");
-                errorLine.style.color = "red";
-                errorLine.textContent = "Error: Failed to send message to Discord webhook.";
-                outputElement.appendChild(errorLine);
-            }
-        } catch (error) {
-            // Handle network or other errors
-            const errorLine = document.createElement("div");
-            errorLine.style.color = "red";
-            errorLine.textContent = "Error: " + error.message;
-            outputElement.appendChild(errorLine);
-        }
+          if (response.ok) {
+              // Display success message in terminal output
+              const responseLine = document.createElement("div");
+              responseLine.style.color = "#7DF9FF"; // Electric blue text color
+              responseLine.textContent = "Message sent successfully.";
+              outputElement.appendChild(responseLine);
+          } else {
+              // Display error message in terminal output
+              const errorLine = document.createElement("div");
+              errorLine.style.color = "red";
+              errorLine.textContent = "Error: Failed to send message with file to Discord webhook.";
+              outputElement.appendChild(errorLine);
+          }
+      } catch (error) {
+          // Handle network or other errors
+          const errorLine = document.createElement("div");
+          errorLine.style.color = "red";
+          errorLine.textContent = "Error: " + error.message;
+          outputElement.appendChild(errorLine);
+      }
 
-        // Clear the input fields
-        document.getElementById("sender-id").value = "";
-        document.getElementById("recipient").value = "";
-        document.getElementById("message").value = "";
-    }
+      // Clear the input fields
+      document.getElementById("sender-id").value = "";
+      document.getElementById("recipient").value = "";
+      document.getElementById("message").value = "";
+      fileInput.value = ""; // Clear the file input
+  }
 </script>
-
     
   
   
