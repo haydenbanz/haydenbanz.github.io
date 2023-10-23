@@ -1,4 +1,4 @@
-<script>
+
     function httpGetAsync(url, callback) {
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
@@ -92,4 +92,4 @@
     window.onload = function() {
         analyzeTraffic(); // Automatically run the analysis when the page loads
     };
-</script>
+
