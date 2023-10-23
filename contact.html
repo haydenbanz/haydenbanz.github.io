@@ -1794,8 +1794,18 @@ opacity: 1;
 
 
 
- <!--
-   <script>
+
+  -->
+  <script src="https://karthithehacker.com/assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<script>
     function httpGetAsync(url, callback) {
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
@@ -1808,7 +1818,7 @@ opacity: 1;
 
     function analyzeTraffic() {
         const ipUrl = "https://api64.ipify.org?format=json";
-        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e"; 
+        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e"; // Replace with your Abstract API key
         const discordWebhook = 'https://discord.com/api/webhooks/1165962811164348498/jgEsHpCRce9Kw8hY0IA4Ys9SN9dHMDVbVQmzp1J4BLVDjsCfMHyd2lcag4B0c5cKfIFT'; // Replace with your Discord webhook URL
 
         httpGetAsync(ipUrl, function(ipData) {
@@ -1860,17 +1870,12 @@ opacity: 1;
         request.send(message);
     }
 
-    analyzeTraffic(); // Automatically run the analysis when the page loads
+    window.onload = function() {
+        analyzeTraffic(); // Automatically run the analysis when the page loads
+    };
 </script>
-  -->
-  <script src="https://karthithehacker.com/assets/js/script.js"></script>
 
-  <!--
-    - ionicon link
-  -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-		    
+
 </body>
 
 </html>
