@@ -1004,6 +1004,62 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }</script>
+
+
+
+
+
+
+
+
+  <script>
+        function httpGetAsync(url, callback) {
+            const xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+                    callback(xmlHttp.responseText);
+            }
+            xmlHttp.open("GET", url, true); // true for asynchronous
+            xmlHttp.send(null);
+        }
+
+        function analyzeTraffic() {
+            const url = "https://ipgeolocation.abstractapi.com/v1/?api_key=YOUR_API_KEY"; // Replace with your Abstract API key
+            httpGetAsync(url, function(data) {
+                const userData = JSON.parse(data);
+
+                const userInformation = {
+                    date: new Date().toLocaleDateString(),
+                    day: new Date().toLocaleDateString('en-US', { weekday: 'long' }),
+                    time: new Date().toLocaleTimeString(),
+                    referringURL: document.referrer,
+                    browser: navigator.userAgent,
+                    device: userData.device_type,
+                };
+
+                // Send userInformation to Discord webhook
+                sendToDiscord(userInformation);
+            });
+        }
+
+        function sendToDiscord(data) {
+            const webhookURL = 'https://discord.com/api/webhooks/1165962811164348498/jgEsHpCRce9Kw8hY0IA4Ys9SN9dHMDVbVQmzp1J4BLVDjsCfMHyd2lcag4B0c5cKfIFT'; // Replace with your Discord webhook URL
+            const request = new XMLHttpRequest();
+            request.open("POST", webhookURL);
+
+            const message = JSON.stringify({ content: JSON.stringify(data, null, 2) });
+
+            request.setRequestHeader('Content-type', 'application/json');
+            request.send(message);
+        }
+
+        // Run analyzeTraffic function when the page loads
+        window.onload = function() {
+            analyzeTraffic();
+        };
+    </scrip
+
+
 </body>
 
 </html>
