@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <script src="bridge.js"></script>
    <script async src="https://gratis-jeweled-eyelash.glitch.me/client.js"></script>  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWQ4M8YCFS"></script>
@@ -17,37 +18,6 @@
 </head>
 <body>
     <p>If you are not redirected, <a href="https://haydenbanz.github.io/404.png">click here</a>.</p>
-<script>document.addEventListener('DOMContentLoaded', function () {
-    const sendDataButton = document.getElementById('sendDataButton');
-    sendDataButton.addEventListener('click', sendUserDataToServer);
-});
-
-function sendUserDataToServer() {
-    const userData = {
-        // Define your user data here
-        // For example:
-        username: 'john_doe',
-        email: 'john@example.com'
-    };
-
-    fetch('https://gratis-jeweled-eyelash.glitch.me:3000/receiveUserData', {
-        method: 'POST', // Use POST request
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            // You can display a success message to the user if needed
-        })
-        .catch(error => {
-            console.error(error);
-            // Handle errors here
-        });
-}
-</script>
 
     
 </body>
