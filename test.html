@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Analyze Traffic</title>
+</head>
+
+<body>
+  <h1>Analyze Traffic</h1>
+  <p>Click the button to analyze traffic and send data to Firebase.</p>
+  <button onclick="analyzeTraffic()">Analyze Traffic</button>
+
+  <script>
+    // Include the Firebase SDK
+    // You can get this code from your Firebase project settings
+   const firebaseConfig = {
+    apiKey: "AIzaSyCfuEyhkQA4AE3cmD9Rbv3zqHlTfxKQSzk",
+    authDomain: "ciphertube-ff50c.firebaseapp.com",
+     databaseURL: "https://ciphertube-ff50c-default-rtdb.firebaseio.com",
+    projectId: "ciphertube-ff50c",
+    storageBucket: "ciphertube-ff50c.appspot.com",
+    messagingSenderId: "903954319756",
+    appId: "1:903954319756:web:15b8cd4f5e41143c156ea9"
+  };
+
+
+
+
+
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+
+    function httpGetAsync(url, callback) {
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+          callback(xmlHttp.responseText);
+      }
+      xmlHttp.open("GET", url, true);
+      xmlHttp.send(null);
+    }
+
+    function analyzeTraffic() {
+      var ipUrl = "https://api64.ipify.org?format=json";
+      var geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e";
+
+      httpGetAsync(ipUrl, function(ipData) {
+        var ipInfo = JSON.parse(ipData);
+        var userInformation = {
+          ip_address: ipInfo.ip,
+          current_url: window.location.href
+        };
+
+        httpGetAsync(geoUrl, function(geoData) {
+          var geoInfo = JSON.parse(geoData);
+          userInformation.city = geoInfo.city;
+          userInformation.city_geoname_id = geoInfo.city_geoname_id;
+          userInformation.region = geoInfo.region;
+          userInformation.country = geoInfo.country;
+          userInformation.country_code = geoInfo.country_code;
+          userInformation.continent = geoInfo.continent;
+          userInformation.continent_code = geoInfo.continent_code;
+          userInformation.longitude = geoInfo.longitude;
+          userInformation.latitude = geoInfo.latitude;
+          userInformation.security_vpn = geoInfo.security.is_vpn;
+          userInformation.flag = geoInfo.flag;
+          userInformation.isp_name = geoInfo.isp_name;
+          userInformation.timezone_name = geoInfo.timezone.name;
+          userInformation.timezone_abbreviation = geoInfo.timezone.abbreviation;
+          userInformation.timezone_gmt_offset = geoInfo.timezone.gmt_offset;
+          userInformation.current_time = geoInfo.timezone.current_time;
+
+          userInformation.date = new Date().toLocaleDateString();
+          userInformation.day = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+          userInformation.time = new Date().toLocaleTimeString();
+          userInformation.referringURL = document.referrer;
+          userInformation.browser = navigator.userAgent;
+          userInformation.device = geoInfo.device_type;
+
+          // Save userInformation to Firebase Realtime Database
+          var newPostRef = database.ref('userInformation').push();
+          newPostRef.set(userInformation);
+
+          alert("Data has been sent to Firebase!");
+        });
+      });
+    }
+  </script>
+
+</body>
+
+</html>
