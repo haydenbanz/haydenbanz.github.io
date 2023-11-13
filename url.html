@@ -126,19 +126,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL Redirect Example</title>
-  <script>
-    // Get the URL parameter value
-    const urlParam = new URLSearchParams(window.location.search).get('url');
 
-    // Check if the parameter exists and is not empty
-    if (urlParam) {
+<script>
+  // Get the URL parameter value
+  const urlParam = new URLSearchParams(window.location.search).get('url');
+
+  // Check if the parameter exists and is not empty
+  if (urlParam) {
+    // Set a timer for 25 seconds
+    setTimeout(() => {
       // Redirect to the specified URL (external)
       window.location.href = urlParam;
-    } else {
-      // Handle the case when the parameter is missing or empty
-      console.log('URL parameter "url" is missing or empty.');
-    }
-  </script>
+    }, 25000); // 25,000 milliseconds = 25 seconds
+  } else {
+    // Handle the case when the parameter is missing or empty
+    console.log('URL parameter "url" is missing or empty.');
+  }
+</script>
+
+
+
+	
 </head>
 <body>
  <main>
