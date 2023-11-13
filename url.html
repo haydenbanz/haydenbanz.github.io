@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>URL Redirect Example</title>
+  <title>Url shortner</title>
   <script>
     // Get the URL parameter value
     const urlParam = new URLSearchParams(window.location.search).get('url');
 
     // Check if the parameter exists and is not empty
     if (urlParam) {
-      // Redirect to the specified URL
+      // Redirect to the specified URL (external)
       window.location.href = urlParam;
     } else {
       // Handle the case when the parameter is missing or empty
@@ -19,8 +19,6 @@
   </script>
 </head>
 <body>
-  <!-- Your website's content goes here -->
-  <h1>Welcome to My Website</h1>
-  <p>This is an example page.</p>
+  
 </body>
 </html>
