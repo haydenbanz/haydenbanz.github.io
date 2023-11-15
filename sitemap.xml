@@ -28,5 +28,11 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+<!-- url tracer Page -->
+     <url>
+        <loc>https://haydenbanz.github.io/url.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
 
 </urlset>
