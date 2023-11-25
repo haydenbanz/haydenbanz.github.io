@@ -4,43 +4,35 @@
 	<title>HAYDEN BARNES</title>
 
 <script>
-  // Get the URL parameter value
   // Get the URL parameter values
-const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(window.location.search);
 
+  // Get the values of 'title', 'pcode', and 'app' parameters
+  const titleParam = urlParams.get('title');
+  const pcodeParam = urlParams.get('pcode');
+  const appParam = urlParams.get('app');
 
-// Get the value of 'title' parameter
-const titleParam = urlParams.get('title');
+  // Log the values to the console
+  console.log('Title Parameter:', titleParam);
+  console.log('Product Code Parameter:', pcodeParam);
+  console.log('App Parameter:', appParam);
 
-// Get the value of 'pcode' parameter
-const pcodeParam = urlParams.get('pcode');
-
-// Get the value of 'app' parameter
-const appParam = urlParams.get('app');
-
-// Log the values to the console
-
-console.log('Title Parameter:', titleParam);
-console.log('Product Code Parameter:', pcodeParam);
-console.log('App Parameter:', appParam);
-</script>
-
-<script>
-  // Get the URL parameter value
-  const urlParam = new URLSearchParams(window.location.search).get('url');
+  // Get the URL parameter value for 'url'
+  const urlParam = urlParams.get('url');
 
   // Check if the parameter exists and is not empty
   if (urlParam) {
-    // Set a timer for 25 seconds
+    // Set a timer for 5 seconds (5000 milliseconds)
     setTimeout(() => {
       // Redirect to the specified URL (external)
-     window.location.href = urlParam;
-    }, 5000);  // 10,000 milliseconds = 10 seconds
+      window.location.href = urlParam;
+    }, 5000);
   } else {
     // Handle the case when the parameter is missing or empty
     console.log('URL parameter "url" is missing or empty.');
   }
 </script>
+
 
 
 
@@ -82,23 +74,6 @@ console.log('App Parameter:', appParam);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL Redirect Example</title>
-
-<script>
-  // Get the URL parameter value
-  const urlParam = new URLSearchParams(window.location.search).get('url');
-
-  // Check if the parameter exists and is not empty
-  if (urlParam) {
-    // Set a timer for 25 seconds
-    setTimeout(() => {
-      // Redirect to the specified URL (external)
-     window.location.href = urlParam;
-    }, 5000);  // 10,000 milliseconds = 10 seconds
-  } else {
-    // Handle the case when the parameter is missing or empty
-    console.log('URL parameter "url" is missing or empty.');
-  }
-</script>
 
 
 
