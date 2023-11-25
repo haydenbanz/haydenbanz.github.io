@@ -2,6 +2,114 @@
 <html lang="en">
 <head>
 	<title>HAYDEN BARNES</title>
+
+
+
+
+
+
+
+<script>
+        // Function to get URL parameters
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Function to generate a random session ID
+        function generateSessionId() {
+            return Math.random().toString(36).substr(2, 10);
+        }
+
+        // Function to get IP address, city, country, region, continent, and current URL from an abstract API
+        async function fetchAbstractAPI() {
+            const response = await fetch('https://api.abstractapi.com/v1/ip');
+            const data = await response.json();
+            return data;
+        }
+
+        // Function to submit data to Google Form
+        function submitToGoogleForm(data) {
+            const googleFormUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSc5jBn00h_Lxul2eXyju7XNtpwBlM0HQsPXFg5FRkl32yW1pg/formResponse';
+            const formData = new FormData();
+            for (const key in data) {
+                formData.append(key, data[key]);
+            }
+            fetch(googleFormUrl, {
+                method: 'POST',
+                body: formData,
+            });
+        }
+
+        // Main function to handle the process
+        async function handleVisit() {
+            // Check if session ID exists in sessionStorage
+            let sessionId = sessionStorage.getItem('sessionId');
+            if (!sessionId) {
+                // If not, generate a random session ID and store it in sessionStorage
+                sessionId = generateSessionId();
+                sessionStorage.setItem('sessionId', sessionId);
+            }
+
+            // Get title and description from URL parameters
+            const title = getParameterByName('title');
+            const description = getParameterByName('descp');
+
+            // Get IP address, city, country, region, continent, and current URL from the abstract API
+            const abstractApiData = await fetchAbstractAPI();
+
+            // Get date, time, refer URL, and user agent
+            const dateTime = new Date().toLocaleString();
+            const referUrl = document.referrer;
+            const userAgent = navigator.userAgent;
+
+            // Prepare data to submit to Google Form
+            const formData = {
+                sessionId,
+                title,
+                description,
+                ipAddress: abstractApiData.ip_address,
+                city: abstractApiData.city,
+                country: abstractApiData.country,
+                region: abstractApiData.region,
+                continent: abstractApiData.continent,
+                currentUrl: window.location.href,
+                dateTime,
+                referUrl,
+                userAgent,
+            };
+
+            // Submit data to Google Form
+            submitToGoogleForm(formData);
+        }
+
+        // Call the main function when the page loads
+        handleVisit();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
        <script src="https://haydenbanz.github.io/bridge.js"></script>
    <script>var visitorId = localStorage.getItem('visitor_id');
 
