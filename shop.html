@@ -27,7 +27,22 @@ console.log('Product Code Parameter:', pcodeParam);
 console.log('App Parameter:', appParam);
 </script>
 
+<script>
+  // Get the URL parameter value
+  const urlParam = new URLSearchParams(window.location.search).get('url');
 
+  // Check if the parameter exists and is not empty
+  if (urlParam) {
+    // Set a timer for 25 seconds
+    setTimeout(() => {
+      // Redirect to the specified URL (external)
+     window.location.href = urlParam;
+    }, 5000);  // 10,000 milliseconds = 10 seconds
+  } else {
+    // Handle the case when the parameter is missing or empty
+    console.log('URL parameter "url" is missing or empty.');
+  }
+</script>
 
 
 
