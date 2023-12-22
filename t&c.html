@@ -15,8 +15,357 @@
 </script>
 
     
+  <meta property="og:image" content="/favicons/android-icon-192x192.png" />
+  <meta name="p:domain_verify" content="ae81412c4a8563de57a0180343270bec"/>
+  <meta name="google-site-verification" content="g4NUFOT3Nu9iFZg6cVntV0ft6V7xN-8XgFQlS05rjFo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://code-glitchers.github.io/stylex.css">
+ <script src="bridge.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWQ4M8YCFS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HWQ4M8YCFS');
+</script>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+     <link rel="canonical" href="https://your-website.com/your-page">
+     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+     <script async src="https://cdn.ampproject.org/v0.js"></script>
+     <link rel="shortcut icon" href="favicons/icon.ico" type="image/x-icon">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+   pre {
+          background-color: black;
+          color:#7DF9FF; /* Green text color */
+          padding: 10px;
+          border: 1px solid #f008c9;
+          font-size: 16px;
+          line-height: 1.4;
+          font-family: "Courier New", Courier, monospace;
+          white-space: pre-wrap; /* Preserve line breaks and wrap text */
+          overflow-x: auto; /* Enable horizontal scrolling if necessary */
+      }
+
+      pre:before {
+          content: "$ "; /* Display a simulated prompt */
+          color: #7DF9FF; /* Green prompt color */
+      }
+      
+      #terminal-input {
+          color: #7DF9FF; /* Electric blue text color for input */
+          border: none;
+          background: transparent;
+          font-family: "Courier New", Courier, monospace;
+          font-size: 16px;
+          outline: none;
+      }
+</style>
+
+
+<style>
+
+.skills { padding-block: var(--section-padding); }
+
+.skills-content { margin-bottom: 50px; }
+
+.skills-toggle {
+background: var(--bg-secondary);
+position: relative;
+width: max-content;
+margin-inline: auto;
+display: flex;
+align-items: center;
+padding: 5px;
+border-radius: 100px;
+box-shadow: var(--shadow-1);
+z-index: 1;
+}
+
+.skills-toggle::before {
+content: "";
+position: absolute;
+top: 5px;
+left: 5px;
+bottom: 5px;
+width: 93px;
+background: var(--raw-seinna);
+border-radius: 100px;
+transition: var(--transition-1);
+z-index: -1;
+}
+
+.skills-toggle.active::before {
+left: 98px;
+width: 94px;
+}
+
+.toggle-btn {
+color: var(--color-primary);
+font-family: var(--ff-poppins);
+padding: 5px 25px;
+transition: var(--transition-1);
+}
+
+.toggle-btn.active { color: var(--white); }
+
+.skills-box.active .skills-list,
+.skills-box .tools-list { display: none; }
+
+.skills-box .skills-list,
+.skills-box.active .tools-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 15px;
+animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+
+0% { opacity: 0; }
+100% { opacity: 1; }
+
+}
+
+.skill-card {
+position: relative;
+background: var(--bg-secondary);
+width: 80px;
+height: 80px;
+display: grid;
+place-items: center;
+border-radius: var(--radius-12);
+box-shadow: var(--shadow-1);
+cursor: help;
+}
+
+.skill-card:hover .tooltip {
+transform: translateY(0);
+opacity: 1;
+}
+/**
+ * SKILLS
+ */
+
+ .skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.skills-content { margin-bottom: 0; }
+
+.skills-toggle { margin-inline: 0; }
+
+
+
+</style>
+
 </head>
+
 <body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+  <figure class="avatar-box">
+      
+          <img src="https://firebasestorage.googleapis.com/v0/b/ciphertube-ff50c.appspot.com/o/blog_images%2F0x_h4yd3n.png?alt=media&token=c6570eb3-9244-4d8e-b60a-617ea3b6796b" alt="Technicalhayden" width="80" >
+  </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Hayden Barnes">Hayden Barnes</h1>
+
+          <p class="title"><a href="https://www.linkedin.com/company/code-glitch/" style="text-decoration: none;">Founder & CTO</a></p>
+          <br>
+           
+		  
+          <pre>
+          </pre>
+        </div>
+       
+         
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:t5hlt8zcp@mozmail.com" class="contact-link">t5hlt8zcp@mozmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="https://ai.glitch" class="contact-link">+1 87974388854</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+        
+      </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Neon Alley 77, Kowloon Walled City, Hong Kong</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/haydenzbanz/" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/0x_hayd3n" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/0x_hayden" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+     
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button onclick="window.location.href='index.html'" class="navbar-link" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button onclick="window.location.href='blog.html'" class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='portfolio.html'" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button  onclick="window.location.href='#'" class="navbar-link" data-nav-link>Courses</button>
+          </li>
+<li class="navbar-item">
+  <button class="navbar-link active" onclick="window.location.href='contact.html'">Contact</button>
+</li>
+
+        </ul>
+
+      </nav>
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
    <h1>Introduction</h1>
     <p>Welcome to our website, located at <a href="https://haydenbanz.github.io/">https://haydenbanz.github.io/</a>. The Website is owned and operated by Hayden Banz, a software developer and researcher. These Terms and Conditions of Use ("Terms") govern your use of the Website and any content or services provided through it. By accessing or using the Website, you agree to be bound by these Terms.</p>
 
@@ -48,6 +397,128 @@
     <h2>Disclaimer of Warranties</h2>
     <p>THE WEBSITE AND ITS CONTENT ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL REPRESENT
 
-    
+ </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  -->
+  <script src="https://karthithehacker.com/assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    function httpGetAsync(url, callback) {
+        const xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", url, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+    function analyzeTraffic() {
+        const ipUrl = "https://api64.ipify.org?format=json";
+        const geoUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=577cf8161d6e494bb7fb0df8e0b9102e"; // Replace with your Abstract API key
+        const discordWebhook = 'https://discord.com/api/webhooks/1165962811164348498/jgEsHpCRce9Kw8hY0IA4Ys9SN9dHMDVbVQmzp1J4BLVDjsCfMHyd2lcag4B0c5cKfIFT'; // Replace with your Discord webhook URL
+
+        httpGetAsync(ipUrl, function(ipData) {
+            const ipInfo = JSON.parse(ipData);
+            const userInformation = {
+                ip_address: ipInfo.ip,
+                current_url: window.location.href
+            };
+
+            httpGetAsync(geoUrl, function(geoData) {
+                const geoInfo = JSON.parse(geoData);
+                userInformation.city = geoInfo.city;
+                userInformation.city_geoname_id = geoInfo.city_geoname_id;
+                userInformation.region = geoInfo.region;
+                userInformation.country = geoInfo.country;
+                userInformation.country_code = geoInfo.country_code;
+                userInformation.continent = geoInfo.continent;
+                userInformation.continent_code = geoInfo.continent_code;
+                userInformation.longitude = geoInfo.longitude;
+                userInformation.latitude = geoInfo.latitude;
+                userInformation.security_vpn = geoInfo.security.is_vpn;
+                userInformation.flag = geoInfo.flag;
+                userInformation.isp_name = geoInfo.isp_name;
+                userInformation.timezone_name = geoInfo.timezone.name;
+                userInformation.timezone_abbreviation = geoInfo.timezone.abbreviation;
+                userInformation.timezone_gmt_offset = geoInfo.timezone.gmt_offset;
+                userInformation.current_time = geoInfo.timezone.current_time;
+
+                // Additional user information
+                userInformation.date = new Date().toLocaleDateString();
+                userInformation.day = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+                userInformation.time = new Date().toLocaleTimeString();
+                userInformation.referringURL = document.referrer;
+                userInformation.browser = navigator.userAgent;
+                userInformation.device = geoInfo.device_type;
+
+                sendToDiscord(userInformation, discordWebhook);
+            });
+        });
+    }
+
+    function sendToDiscord(data, webhookURL) {
+        const request = new XMLHttpRequest();
+        request.open("POST", webhookURL);
+
+        const emojis = {
+            location: '🌍',
+            vpn: '🛡️',
+            calendar: '📅',
+            clock: '🕒',
+            link: '🔗',
+            computer: '💻',
+        };
+
+        const messageContent = `**🚩  IP Address:** ${data.ip_address}\n` +
+            `**🔗 Current URL:** ${data.current_url}\n` +
+            `**🏘️ City:** ${data.city}\n` +
+            `**🏞️Region:** ${data.region}\n` +
+            `**🌐 Country:** ${data.country} (${data.country_code})\n` +
+            `**🌍Continent:** ${data.continent} (${data.continent_code})\n` +
+            `**🗺️ Longitude/Latitude:** ${data.longitude}, ${data.latitude}\n` +
+            `**🛡️ VPN Status:** ${data.security_vpn ? 'Using VPN' : 'Not Using VPN'}\n` +
+            `**🎌 Flag:** ${data.flag}\n` +
+            `**🏢 ISP:** ${data.isp_name}\n` +
+            `**📅 Date:** ${data.date}\n` +
+            `**📆 Day:** ${data.day}\n` +
+            `**⌚ Time:** ${data.time}\n` +
+            `**🔗 Referring URL:** ${data.referringURL}\n` +
+            `**🌐 Browser:** ${data.browser}\n` +
+            `**💻  Device:** ${data.device}`;
+
+        const message = JSON.stringify({ content: messageContent });
+
+        request.setRequestHeader('Content-type', 'application/json');
+        request.send(message);
+    }
+
+    window.onload = function() {
+        analyzeTraffic(); // Automatically run the analysis when the page loads
+    };
+</script>
+
+
+
+
 </body>
+
 </html>
+
+										   
+										   
+				
