@@ -1249,63 +1249,52 @@ opacity: 1;
 
         <section class="contact-form">
 
-          <h3 class="h3 form-title">Contact Form</h3>
+          <h3 class="h3 form-title">TERMS AND CONDTIONS TO USE</h3>
+  <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to our website, located at <a href="https://haydenbanz.github.io/">https://haydenbanz.github.io/</a> (the "Website"). The Website is owned and operated by Hayden Banz, a software developer and researcher. These Terms and Conditions of Use ("Terms") govern your use of the Website and any content or services provided through it. By accessing or using the Website, you agree to be bound by these Terms.</p>
+    </section>
 
-          <form action="#" class="form" id="message-form">
-            <div class="input-wrapper">
-                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-                <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-            <button class="form-btn" type="submit">
-                <ion-icon name="paper-plane"></ion-icon>
-                <span>Send Message</span>
-            </button>
-        </form>
+    <section id="acceptance">
+        <h2>Acceptance of Terms</h2>
+        <p>By accessing or using the Website, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, please do not access or use the Website. We reserve the right to modify these Terms from time to time without notice to you. Your continued use of the Website after such modifications will constitute your acceptance of the modified Terms.</p>
+    </section>
+
+    <section id="intellectual-property">
+        <h2>Intellectual Property Rights</h2>
+        <p>The Website and all content, materials, information, and other intellectual property available on or through the Website are protected by copyright, trademark, patent, trade secret, and other laws. You agree not to reproduce, duplicate, copy, sell, resell, or exploit for any commercial purposes any portion of the Website or its content, use of the Website, or access to the Website.</p>
+    </section>
+
+    <section id="permitted-uses">
+        <h2>Permitted Uses</h2>
+        <p>You may use the Website and its content only for your personal, non-commercial use, and not for republication, distribution, assignment, sublicense, sale, preparation of derivative works, or other exploitation. You may also download and print copies of the content solely for your personal, non-commercial use, provided that you maintain all copyright and other proprietary notices contained in the original material.</p>
+    </section>
+
+    <section id="prohibited-uses">
+        <h2>Prohibited Uses</h2>
+        <p>You agree not to engage in any of the following prohibited activities:</p>
+        <ul>
+            <li>Use the Website in any way that is unlawful, illegal, fraudulent, or harmful to others;</li>
+            <li>Use the Website to send spam or other unauthorized communications;</li>
+            <li>Use the Website to post or transmit any threatening, libelous, defamatory, obscene, pornographic, abusive, or hateful content;</li>
+            <li>Use the Website to post or transmit any content that infringes upon another person's intellectual property rights;</li>
+            <li>Interfere with the security of the Website or attempt to gain unauthorized access to the Website, computer systems, or networks connected to the Website;</li>
+            <li>Attempt to reverse engineer, decompile, disassemble, or otherwise tamper with the Website's source code or any software used by the Website;</li>
+            <li>Modify, adapt, translate, or create derivative works based on the Website or its content;</li>
+            <li>Remove, hide, or alter any copyright, trademark, or other proprietary rights notice contained in the Website or its content;</li>
+            <li>Use any robot, spider, scraper, or other automated means to access the Website for any purpose without our express written permission;</li>
+            <li>Take any action that imposes an unreasonable or disproportionately large load on the Website's infrastructure;</li>
+            <li>Engage in any activity that interferes with the proper working of the Website or any activity that restricts or inhibits any other user from using the Website.</li>
+        </ul>
+    </section>
+
+    <section id="disclaimer-of-warranties">
+        <h2>Disclaimer of Warranties</h2>
+        <p>THE WEBSITE AND ITS CONTENT ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL REPRESENTATIONS, WARRANTIES, OR GUARANTEES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, TITLE, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND QUIET ENJOYMENT. WE DO NOT WARRANT THAT THE WEBSITE OR ITS CONTENT WILL MEET YOUR REQUIREMENTS, BE ACCURATE, COMPLETE, RELIABLE, OR ERROR-FREE.</p>
+    </section>
+
     
-        <script>
-            // Add an event listener for the form submission
-            document.getElementById('message-form').addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent the default form submission behavior
     
-                const form = event.target; // Get the form element
-                const formData = new FormData(form); // Create a FormData object from the form
-    
-                // Create an object to hold the Discord webhook data
-                const webhookData = {
-                    content: 'New message from your website:',
-                    embeds: [{
-                        title: 'Message Details',
-                        fields: [
-                            { name: 'Full Name', value: formData.get('fullname') },
-                            { name: 'Email', value: formData.get('email') },
-                            { name: 'Message', value: formData.get('message') }
-                        ]
-                    }]
-                };
-    
-                // Send a POST request to your Discord webhook URL
-                fetch('https://discord.com/api/webhooks/1160203677252976722/laYHqZZakCqW-b3i2l6Xa_ubOVEfwMQi2WQ71aaKUljy0HkoY4xvAqREbvOgqOR7DLTG', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(webhookData)
-                })
-                .then(response => {
-                    if (response.ok) {
-                        alert('Message sent successfully!');
-                        form.reset(); // Clear the form
-                    } else {
-                        alert('Message sending failed. Please try again later.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error sending message:', error);
-                    alert('An error occurred while sending the message.');
-                });
-            });
-        </script>
 
         </section>
 
