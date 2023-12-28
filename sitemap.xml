@@ -28,66 +28,62 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-<!-- url tracer Page -->
-     <url>
+
+    <!-- URL Tracer Page -->
+    <url>
         <loc>https://haydenbanz.github.io/url.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
-     <url>
-        <loc>https://haydenbanz.github.io/t&c.html</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    
-    </url>
-
-
- <url>
-        <loc>https://haydenbanz.github.io/p&p.html</loc>
+    <!-- Terms and Conditions Page -->
+    <url>
+        <loc>https://haydenbanz.github.io/t&amp;c.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-     <url>
+
+    <!-- Privacy and Policy Page -->
+    <url>
+        <loc>https://haydenbanz.github.io/p&amp;p.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Notes Pages -->
+    <url>
         <loc>https://haydenbanz.github.io/notes/</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
-    
-     <url>
+    <url>
         <loc>https://haydenbanz.github.io/notes/meat_technology.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
- <url>
+    <url>
         <loc>https://haydenbanz.github.io/notes/spice_technology.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-     <url>
+
+    <url>
         <loc>https://haydenbanz.github.io/notes/extrusion_technology.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
-<url>
+    <url>
         <loc>https://haydenbanz.github.io/notes/food_toxicology.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-<url>
+
+    <url>
         <loc>https://haydenbanz.github.io/notes/food_preservation.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-
-
-
-
-
-
-
-    
 </urlset>
