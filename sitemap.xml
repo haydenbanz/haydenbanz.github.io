@@ -35,4 +35,59 @@
         <priority>1.0</priority>
     </url>
 
+     <url>
+        <loc>https://haydenbanz.github.io/t&c.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    
+    </url>
+
+
+ <url>
+        <loc>https://haydenbanz.github.io/p&p.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+     <url>
+        <loc>https://haydenbanz.github.io/notes/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    
+     <url>
+        <loc>https://haydenbanz.github.io/notes/meat_technology.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+ <url>
+        <loc>https://haydenbanz.github.io/notes/spice_technology.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+     <url>
+        <loc>https://haydenbanz.github.io/notes/extrusion_technology.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+<url>
+        <loc>https://haydenbanz.github.io/notes/food_toxicology.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+<url>
+        <loc>https://haydenbanz.github.io/notes/food_preservation.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+
+
+
+
+
+    
 </urlset>
