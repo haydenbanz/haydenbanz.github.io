@@ -13,14 +13,16 @@ body {
     margin-bottom: 10px;
   }
   
-  
+  header {
+    background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(8, 137, 129, 1) 100%
+  );
     padding: 20px;
   }
   
-  .headerX {
-    background: rgba(8, 137, 129, 1) ;
-    
-  }
+
   
   section {
     margin-bottom: 20px;
